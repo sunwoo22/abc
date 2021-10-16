@@ -1,9 +1,8 @@
-# spring-study
-스프링 개념 정리합시다.
+# Spring-study
+스프링 개념 정리
 <br><br>
 
 ## Contents
-
 - [객체지향](#객체지향)
 - [디자인 패턴](#디자인-패턴)
 - [Web](#Web)
@@ -12,15 +11,15 @@
 - [Spring Boot 기능 활용](#Spring-Boot-기능-활용)
 <br><br>
 
-
 ## 객체지향
 
 <details>
-<summary>객체지향의 등장</summary><br>
-<p>이전에는 C언어처럼 실행하고자 하는 순서대로 명령어를 입력해서 실행되는 "절차 지향"이 주를 이뤘으며, 이러한 방법으로 코딩하는 언어를 "절차지향 언어"라고 한다. 이 때에는 프로그램의 단위가 크지 않았으며, 대체적으로 간단한 Logic을 순차적으로 처리하여 결과를 얻는데 그쳤지만, 점점 컴퓨터의 발전과 이로 인하여 프로그램의 복잡도가 증가하면서 이에 들어가는 유지보수, 개발기간 등 다양한 부분에서 비효율이 발생했다.</p>
-<p>이런 어려움을 해결하기 위해 "효과적인 개발방식"을 채택하게 되었고, 이는 이전에 사용하던 흐름에 따른 개발 방식에서 벗어나 객체지향의 특성인 추상화, 상속, 은닉, 재사용, 인터페이스 등 여러 곳에서 객체지향으로 개발을 시작했다. 함수의 활용으로도 충분히 좋은 프로그램을 개발할 수 있었으나 새로운 시각으로 바라보기 시작했다.</p>
-<p>객체지향이란 현실에 존재하는 사물을 있는 그대로 모델링하여, 이들의 "행위와 속성을 정의"하고, 절차적이 아닌 객체가 중심이 되어 "실제 사물이 동작하는 방식으로 설계"하는 것이다. 이는 사물에 대해 "객체(Object)"라고 부르며, 해당 사물이 하는 "행위를 Method"로 정의하고 해당 사물이 가지는 속성을 "변수(Variable)"라고 정의한다. 실제 사물을 중심으로 설계하기 때문에 기존의 절차지향보다는 조금 더 "편리한 설계"가 가능해졌다.</p>
-<p>Java는 1995년 Sun Microsystems에서 작은 언어를 지향하는 객체지향 언어로 소개되었다. 당시 C++과 유사한 언어의 구문을 채택하였으나, C++이 가지고 있는 시스템 레벨 접근, 메모리 직접 할당 및 해제, 포인터 등 복잡한 개발 방식을 사용하지 않았다. 또한 어떠한 운영체제에서도 자바 가상 머신만 있으면 독립적으로 실행될 수 있도록 설계가 되어 있어, 여러 플랫폼에서 호환성을 제공하는 장점을 가진다.</p>
+<summary>객체지향의 등장</summary>
+
+이전에는 C언어처럼 실행하고자 하는 순서대로 명령어를 입력해서 실행되는 "절차 지향"이 주를 이뤘으며, 이러한 방법으로 코딩하는 언어를 "절차지향 언어"라고 한다. 이 때에는 프로그램의 단위가 크지 않았으며, 대체적으로 간단한 Logic을 순차적으로 처리하여 결과를 얻는데 그쳤지만, 점점 컴퓨터의 발전과 이로 인하여 프로그램의 복잡도가 증가하면서 이에 들어가는 유지보수, 개발기간 등 다양한 부분에서 비효율이 발생했다.   
+이런 어려움을 해결하기 위해 "효과적인 개발방식"을 채택하게 되었고, 이는 이전에 사용하던 흐름에 따른 개발 방식에서 벗어나 객체지향의 특성인 추상화, 상속, 은닉, 재사용, 인터페이스 등 여러 곳에서 객체지향으로 개발을 시작했다. 함수의 활용으로도 충분히 좋은 프로그램을 개발할 수 있었으나 새로운 시각으로 바라보기 시작했다.   
+객체지향이란 현실에 존재하는 사물을 있는 그대로 모델링하여, 이들의 "행위와 속성을 정의"하고, 절차적이 아닌 객체가 중심이 되어 "실제 사물이 동작하는 방식으로 설계"하는 것이다. 이는 사물에 대해 "객체(Object)"라고 부르며, 해당 사물이 하는 "행위를 Method"로 정의하고 해당 사물이 가지는 속성을 "변수(Variable)"라고 정의한다. 실제 사물을 중심으로 설계하기 때문에 기존의 절차지향보다는 조금 더 "편리한 설계"가 가능해졌다.   
+Java는 1995년 Sun Microsystems에서 작은 언어를 지향하는 객체지향 언어로 소개되었다. 당시 C++과 유사한 언어의 구문을 채택하였으나, C++이 가지고 있는 시스템 레벨 접근, 메모리 직접 할당 및 해제, 포인터 등 복잡한 개발 방식을 사용하지 않았다. 또한 어떠한 운영체제에서도 자바 가상 머신만 있으면 독립적으로 실행될 수 있도록 설계가 되어 있어, 여러 플랫폼에서 호환성을 제공하는 장점을 가진다.   
 </details>
 <br>
 
@@ -42,62 +41,77 @@
 ### 물리 객체와 개념 객체
 <details>
 <summary>물리 객체</summary>
-물리적 객체는 실제로 사물이 존재하며, 이를 클래스로 정의한 객체를 의미한다.
+
+물리적 객체는 실제로 사물이 존재하며, 이를 클래스로 정의한 객체를 의미한다.   
 ex) 자동차 렌탈 시스템: 자동차, 고객, 직원, 사업장, 정비소 등
 </details>
 <details>
 <summary>개념 객체</summary>
-웹 시스템에서 Service에 해당되며, 이는 Busineww logic을 처리하는 부분을 의미한다. Business logic에서는 여러 객체를 서로 상호작용하도록 하며, 객체가 제공하는 오퍼레이션 Method를 통하여 객체의 속성을 변경한다.
+
+웹 시스템에서 Service에 해당되며, 이는 Busineww logic을 처리하는 부분을 의미한다. Business logic에서는 여러 객체를 서로 상호작용하도록 하며, 객체가 제공하는 오퍼레이션 Method를 통하여 객체의 속성을 변경한다.   
 ex) 사용자 관리 시스템: 사용자 객체의 마지막 접속일자를 이용하여 계정만료, 비밀번호 초기화, 재등록 처리 등
 </details>
 <br>
 
 ### 객체지향의 4대 특성
 <details>
-- 캡슐화
+<summary>캡슐화</summary>
 객체의 속성(Variable)을 보호하기 위해서 사용한다.
-- Method 설계
-속성이 선언되었으나, 이의 상태를 변경하는 Method가 없다면, 잘못 선언된 속성이다. 즉, 자신이 가지고 있는 속성에 대해서는 해당 상태를 변경하는 기능을 제공해야 한다.
-실물 객체가 가진 기능을 모두 제공해야 한다.
-각각의 Method는 서로 관련성이 있어야 한다.
-객체 안의 Method는 객체 안의 속성을 처리해야 하며, 다른 객체를 전달받아 해당 다른 객체에 정의된 속성을 직접 처리하면 안된다. 단, Method의 실행에 필요한 값들은 객체의 형태가 아닌 매개변수의 형태로 전달되어져야 한다.
-외부에서 내부 속성(Variable)에 직접 접근하는 것이 아닌 Getter/Setter Method를 통해서 접근하도록 적용한다.
-데이터 처리를 위한 기본적인 CRUD Method, Business logic 처리를 위한 Method, 객체의 생명 주기 처리 Method(disrtoy(), disconnect(), quit() 등), 객체의 영구성 관리 Method(영구성(유효성) 속성에 대한 변경이 필요한 경우, 외부에서는 접근이 불가능하도록 private로 선언하며, 내부의 다른 Method를 통해서 사용되도록 함)를 제공한다. Method의 속성은 반드시 1개에 속할 필요는 없으며, 여러 속성에 해당될 수 있다.
-- 장점
-객체지향의 패러다임 중 하나인 추상화를 제공한다. 실제로 Method가 어떻게 동작하는지 외부에서는 이해할 필요가 없으며, 이를 단순 호출만으로 해당 기능을 실행할 수 있고, 이를 통해서 객체 단위로 프로그램 설계가 가능하다.
-재사용성과 유지보수의 효율성이 향상된다. 한 객체에 관련된 속성 및 Method는 모두 캡슐화의 형태로 제공되므로, 객체의 모듈성과 응집도가 높아진다. 만일 절차적 프로그래밍에서 Method를 재사용한다면, 함수가 참조하고 있는 전역변수 및 내부에서 호출하는 Method가 미치는 영향을 모두 체크해야 하나, 객체의 경우는 단일 객체에만 영향을 주기에 재사용성이 높다.
+<p>
+Method 설계
+
+- 속성이 선언되었으나, 이의 상태를 변경하는 Method가 없다면, 잘못 선언된 속성이다. 즉, 자신이 가지고 있는 속성에 대해서는 해당 상태를 변경하는 기능을 제공해야 한다.
+- 실물 객체가 가진 기능을 모두 제공해야 한다.
+- 각각의 Method는 서로 관련성이 있어야 한다.
+- 객체 안의 Method는 객체 안의 속성을 처리해야 하며, 다른 객체를 전달받아 해당 다른 객체에 정의된 속성을 직접 처리하면 안된다. 단, Method의 실행에 필요한 값들은 객체의 형태가 아닌 매개변수의 형태로 전달되어져야 한다.
+- 외부에서 내부 속성(Variable)에 직접 접근하는 것이 아닌 Getter/Setter Method를 통해서 접근하도록 적용한다.
+- 데이터 처리를 위한 기본적인 CRUD Method, Business logic 처리를 위한 Method, 객체의 생명 주기 처리 Method(disrtoy(), disconnect(), quit() 등), 객체의 영구성 관리 Method(영구성(유효성) 속성에 대한 변경이 필요한 경우, 외부에서는 접근이 불가능하도록 private로 선언하며, 내부의 다른 Method를 통해서 사용되도록 함)를 제공한다.
+- Method의 속성은 반드시 1개에 속할 필요는 없으며, 여러 속성에 해당될 수 있다.
+</p>
+<p>
+장점
+
+- 객체지향의 패러다임 중 하나인 추상화를 제공한다. 실제로 Method가 어떻게 동작하는지 외부에서는 이해할 필요가 없으며, 이를 단순 호출만으로 해당 기능을 실행할 수 있고, 이를 통해서 객체 단위로 프로그램 설계가 가능하다.
+- 재사용성과 유지보수의 효율성이 향상된다. 한 객체에 관련된 속성 및 Method는 모두 캡슐화의 형태로 제공되므로, 객체의 모듈성과 응집도가 높아진다. 만일 절차적 프로그래밍에서 Method를 재사용한다면, 함수가 참조하고 있는 전역변수 및 내부에서 호출하는 Method가 미치는 영향을 모두 체크해야 하나, 객체의 경우는 단일 객체에만 영향을 주기에 재사용성이 높다.
+</p>
+<p>
+무결성
+
+- 보통의 캡슐화 코딩이라고 하면 주로 변수는 private로 Method를 public으로 선언하는 형태를 많이 가지게 되는데, 이는 객체의 무결성을 위함이다.
+- Getter/Setter를 제외하고는 public method는 입력된 매개변수를 Validation 한 후에 실행하는 것을 기본으로 한다.
+- Validation을 통하여, 객체의 값을 바꾸거나 값에 대한 유효성을 가질 수 있다.
+</p>
 </details>
 <details>
-- 무결성
-보통의 캡슐화 코딩이라고 하면 주로 변수는 private로 Method를 public으로 선언하는 형태를 많이 가지게 되는데, 이는 객체의 무결성을 위함이다. Getter/Setter를 제외하고는 public method는 입력된 매개변수를 Validation 한 후에 실행하는 것을 기본으로 한다. Validation을 통하여, 객체의 값을 바꾸거나 값에 대한 유효성을 가질 수 있다.
-</details>
-<details>
-- 상속
+<summary>상속</summary>
 객체지향에서의 상속은, 속성의 상속이 아닌 하위로 내려갈수록 구체화되는 것이다.
-- 상속의 효과
-프로그램 구조에 대한 이해도가 향상된다. 최상위 클래스의 구조를 보고, 하위 클래스의 동작을 이해할 수 있다.
-재사용성이 높아진다. 상속을 이용하여 해당 클래스에 필요한 속성과 메소드를 모두 정의하지 않고, 상속을 받아 사용할 수 있다.
-확장성이 높아진다. 일관된 형태의 클래스 객체를 추가할 수 있어, 간단하게 프로그램 확장이 가능하다.
-유지보수성이 향상된다. 각 객체마다 자신의 메소드를 정의하고 있다면 코드 수정에서 많은 작업이 필요하지만, 상속을 사용한 경우 일관된 형태로 작성이 가능하다.
+<p>
+상속의 효과
+
+- 프로그램 구조에 대한 이해도가 향상된다. 최상위 클래스의 구조를 보고, 하위 클래스의 동작을 이해할 수 있다.
+- 재사용성이 높아진다. 상속을 이용하여 해당 클래스에 필요한 속성과 메소드를 모두 정의하지 않고, 상속을 받아 사용할 수 있다.
+- 확장성이 높아진다. 일관된 형태의 클래스 객체를 추가할 수 있어, 간단하게 프로그램 확장이 가능하다.
+- 유지보수성이 향상된다. 각 객체마다 자신의 메소드를 정의하고 있다면 코드 수정에서 많은 작업이 필요하지만, 상속을 사용한 경우 일관된 형태로 작성이 가능하다.
+</p>
 </details>
 <details>
-- 다형성
+<summary>다형성</summary>
 다형성은 하나의 개체가 여러 개의 형태로 변화하는 것을 말하며 이를 객체지향에서도 유사하게 사용한다. 다형성은 오버라이딩을 통해 가능하다.
 </details>
 <details>
-- 추상화
+<summary>추상화</summary>
 객체지향에서의 추상화는 모델링이다. 구체적으로 공통적인 부분 또는 특정 특성을 분리하여 재조합하는 부분이 추상화이다. 다형성, 상속 모두 추상화에 속한다.
 </details>
 <br>
 
 ### 객체지향 설계 5원칙 SOLID
 <details>
-<summary>응집도와 결합도</summary>
-<p>좋은 소프트웨어 설계를 위해서는 결합도(coupling)는 낮추고 응집도(cohesion)는 높여야 한다.</p>
-<p>결합도: 모듈(클래스) 간의 상호 의존 정도를 나타내는 지표로써 결합도가 낮으면 모듈간의 상호 의존성이 줄어들어서 객체의 재사용 및 유지보수가 유리하다.</p>
-<p>응집도: 하나의 모듈 내부에 존재하는 구성 요소들의 기능적 관련성으로 응집도가 높은 모듈은 하나의 책임에 집중하고 독립성이 높아져 재사용 및 유지보수가 용이하다.</p>
+<summary>결합도와 응집도</summary>
+
+좋은 소프트웨어 설계를 위해서는 결합도(coupling)는 낮추고 응집도(cohesion)는 높여야 한다.   
+- 결합도: 모듈(클래스) 간의 상호 의존 정도를 나타내는 지표로써 결합도가 낮으면 모듈간의 상호 의존성이 줄어들어서 객체의 재사용 및 유지보수가 유리하다.   
+- 응집도: 하나의 모듈 내부에 존재하는 구성 요소들의 기능적 관련성으로 응집도가 높은 모듈은 하나의 책임에 집중하고 독립성이 높아져 재사용 및 유지보수가 용이하다.
 </details>
-<br>
 
 #### SOLID
 <details>
@@ -123,7 +137,10 @@ ex) 사용자 관리 시스템: 사용자 객체의 마지막 접속일자를 �
 <br>
 
 ### POJO(Plain Old Java Object) Java
+<details>
+<summary>POJO란?</summary>
 순수한 자바 오브젝트를 뜻한다.
+</details>
 <details>
 <summary>특정 규약에 종속되지 않는다.</summary>
 특정 Library, Module에서 정의된 클래스를 상속받아서 구현하지 않아도 된다. POJO가 되기 위해서는 외부에 의존성을 두지 않고, 순수한 Java로 구성이 가능해야 한다.
@@ -143,59 +160,72 @@ ex) 사용자 관리 시스템: 사용자 객체의 마지막 접속일자를 �
 ## 디자인 패턴
 
 ### 디자인 패턴
+<details>
+<summary>디자인 패턴이란?</summary>
 자주 사용하는 설계 패턴을 정형화해서 이를 유형별로 가장 최적의 방법으로 개발을 할 수 있도록 정해둔 설계이다. 알고리즘과 유사하지만 명확하게 정답이 있는 형태는 아니며 프로젝트의 상황에 맞추어 적용 가능하다.
-
+</details>
 <details>
 <summary>GOF 디자인 패턴</summary>
 소프트웨어를 설계할 때는 기존의 경험이 매우 중요하다. 그러나 모든 사람들이 다양한 경험을 가지고 있을 수는 없다. 이러한 지식을 공유하기 위해서 나온 것이 GOF(Gand of Four)의 디자인 패턴이다. 객체지향 개념에 따른 설계 중 재사용할 경우 유용한 설계를 디자인 패턴으로 정리해둔 것이다. GOF의 디자인 패턴은 총 23개이며, 이를 잘 이해하고 활용한다면 경험이 부족하더라도 좋은 소프트웨어 설계가 가능하다.
 </details>
 <details>
 <summary>장점 및 단점</summary>
+<p>
 장점
-<li>개발자(설계자) 간의 원활한 소통</li>
-<li>소프트웨어 구조 파악 용이</li>
-<li>재사용을 통한 개발 시간 단축</li>
-<li>설계 변경 요청에 대한 유연한 대처</li>
+
+- 개발자(설계자) 간의 원활한 소통
+- 소프트웨어 구조 파악 용이
+- 재사용을 통한 개발 시간 단축
+- 설계 변경 요청에 대한 유연한 대처
+</p>
+<p>
 단점
-<li>객체지향 설계/구현</li>
-<li>초기 투자 비용 부담</li>
+
+- 객체지향 설계/구현
+- 초기 투자 비용 부담
+<p>
 </details>
 <br>
+
+### 디자인 패턴의 종류
 <details>
 <summary>생성 패턴</summary>
+
 객체를 생성하는 것과 관련된 패턴으로, 객체의 생성과 변경이 전체 시스템에 미치는 영향을 최소화하고 코드의 유연성을 높여준다.
-<li>Factory Method</li>
-<li>Singleton</li>
-<li>Prototype</li>
-<li>Builder</li>
-<li>Abstract Factory</li>
-<li>Chaining</li>
+- Factory Method
+- Singleton
+- Prototype
+- Builder
+- Abstract Factory
+- Chaining
 </details>
 <details>
 <summary>구조 패턴</summary>
+
 프로그램 내의 자료구조나 인터페이스 구조 등 프로그램 구조를 설계하는 데 활용될 수 있는 패턴이다. 클래스, 객체들의 구성을 통해서 더 큰 구조를 만들 수 있게 해준다. 큰 규모의 시스템에서는 많은 클래스들이 서로 의존성을 가지게 되는데, 이런 복잡한 구조를 개발하고 유지보수하기 쉽게 만들어 준다.
-<li>Adaper</li>
-<li>Compositer</li>
-<li>Bridge</li>
-<li>Decorator</li>
-<li>Facade</li>
-<li>Flyweight</li>
-<li>Proxy</li>
+- Adaper
+- Compositer
+- Bridge
+- Decorator
+- Facade
+- Flyweight
+- Proxy
 </details>
 <details>
 <summary>행위 패턴</summary>
+
 반복적으로 사용되는 객체들의 상호작용을 패턴화한 것으로, 클래스나 객체들이 상호작용하는 방법과 책임을 분산하는 방법을 제공한다. 행위 패턴은 행위 관련 패턴을 사용하여 독립적으로 일을 처리하고자 할 때 사용한다.
-<li>Template Method</li>
-<li>Interpreter</li>
-<li>Iterator</li>
-<li>Observer</li>
-<li>Strategy</li>
-<li>Visitor</li>
-<li>Chain of responsibility</li>
-<li>Command</li>
-<li>Mediator</li>
-<li>State</li>
-<li>Memento</li>
+- Template Method
+- Interpreter
+- Iterator
+- Observer
+- Strategy
+- Visitor
+- Chain of responsibility
+- Command
+- Mediator
+- State
+- Memento
 </details>
 <br>
 
@@ -234,50 +264,59 @@ ex) 사용자 관리 시스템: 사용자 객체의 마지막 접속일자를 �
 ## Web
 
 ### Web
+<details>
+<summary>Web이란?</summary>
 Web(World Wide Web, WWW, W3)은 인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 공유할 수 있는 전 세계적인 정보 공간을 말한다.
-
+</details>
 <details>
 <summary>Web의 용도</summary>
-<li>Web Site : 
-google, naver, daum, facebook 등 HTML로 구성된 여러 사이트들</li>
-<li>API(Application Programming Interface) * Web Service : 
-Google Open API, Naver Open API, Kakao Open API 등</li>
-<li>User Interface : 
-Chrome, Safari, Explorer, Smart Watch, IP TV 등</li>
+
+- Web Site :   
+google, naver, daum, facebook 등 HTML로 구성된 여러 사이트들
+- API(Application Programming Interface) * Web Service :   
+Google Open API, Naver Open API, Kakao Open API 등
+- User Interface :   
+Chrome, Safari, Explorer, Smart Watch, IP TV 등
 </details>
 <details>
 <summary>Web의 기반</summary>
-<li>HTTP(Hypertext Transfer Protocol) : 
-어플리케이션 컨트롤</li>
-<li>URI(Uniform Resouce Identifier) : 
-리소스 식별자. 모든 정모에 접근할 수 있는 정보</li>
-<li>HTML(Hyper Text Markp Language) : 
-하이퍼미디어 포맷. XML을 바탕으로 한 범용 문서 포맷</li>
+
+- HTTP(Hypertext Transfer Protocol) : 
+어플리케이션 컨트롤
+- URI(Uniform Resouce Identifier) : 
+리소스 식별자. 모든 정모에 접근할 수 있는 정보
+- HTML(Hyper Text Markp Language) : 
+하이퍼미디어 포맷. XML을 바탕으로 한 범용 문서 포맷
 </details>
 <br>
 
 ### REST
-REST(Representational State Trasfer: 자원의 상태 전달) - 네트워크 아키텍쳐
 <details>
-<summary>REST 특징</summary>
-<li>Client/Server : 클라이언트와 서버가 서로 독립적으로 분리되어 있어야 한다.</li>
-<li>Stateless : 요청에 대해서 클라이언트의 상태를 서버에 저장하지 않는다.</li>
-<li>Cache : 클라이언트는 서버의 응답을 Cache(임시저장) 할 수 있어야 한다.</li>
-<li>계층화(Layered System) : 서버와 클라이언트 사이에 방화벽, 게이트웨이, 프록시 등 다양한 계층 형태로 구성이 가능해야 하며, 이를 확장할 수 있어야 한다.</li>
-<li>인터페이스 일관성 : 인터페이스의 일관성을 지키고 아키텍쳐를 단순화시켜 작은 단위로 분리하여 클라이언트, 서버가 독립적으로 개선될 수 있어야 한다.</li>
-<li>Code on Demand(Optional) : 자바 애플릿, 자바스크립트, 플래시 등 특정한 기능을 서버로부터 클라이언트가 전달받아 코드를 실행할 수 있어야 한다.</li>
+<summary>REST란?</summary>
+REST(Representational State Trasfer: 자원의 상태 전달) - 네트워크 아키텍쳐
 </details>
 <details>
-<summary>REST를 잘 사용했는지 판단하는 기준 : 인터페이스 일관성</summary>
+<summary>REST 특징</summary>
+
+- Client/Server : 클라이언트와 서버가 서로 독립적으로 분리되어 있어야 한다.
+- Stateless : 요청에 대해서 클라이언트의 상태를 서버에 저장하지 않는다.
+- Cache : 클라이언트는 서버의 응답을 Cache(임시저장) 할 수 있어야 한다.
+- 계층화(Layered System) : 서버와 클라이언트 사이에 방화벽, 게이트웨이, 프록시 등 다양한 계층 형태로 구성이 가능해야 하며, 이를 확장할 수 있어야 한다.
+- 인터페이스 일관성 : 인터페이스의 일관성을 지키고 아키텍쳐를 단순화시켜 작은 단위로 분리하여 클라이언트, 서버가 독립적으로 개선될 수 있어야 한다.
+- Code on Demand(Optional) : 자바 애플릿, 자바스크립트, 플래시 등 특정한 기능을 서버로부터 클라이언트가 전달받아 코드를 실행할 수 있어야 한다.
+</details>
+<details>
+<summary>인터페이스 일관성</summary>
+
 아래의 조건들을 잘 갖춘 경우 RESTful하다고 표현하고 이를 REST API라고 부른다.
-<li>자원의 식별 : <br>
-웹 기반의 REST에서는 리소스 접근을 할 때 URI를 사용한다.</li>
-<li>메시지를 통한 리소스 조작 : <br>
-Web에서는 다양한 방식으로 데이터를 전달하는데 그 중에서 가장 많이 사용하는 방식은 HTML, XML, JSON, TEXT 등이 있다. 이 중에서 어떠한 타입의 데이터인지 알려주기 위해서 HTTP Header 부분에 content-type을 통해 데이터의 타입을 지정해줄 수 있다. 또한 리소스 조작을 위해 데이터 전체를 전달하지 않고 메세지 형태로 데이터를 주고받으로, client-server가 독립적으로 확장 가능하도록 한다.</li>
-<li>자기 서술적 메세지 : <br>
-요청하는 데이터가 어떻게 처리되어져야 하는지 충분한 데이터를 포함할 수 있어야 한다. HTTP 기반의 REST에서는 HTTP Method와 Header 정보, URI에 포함되는 정보로 표현할 수 있다. 그 외에 담지 못한 정보들은 URI의 메세지를 통하여 표현한다.</li>
-<li>Application 상태에 대한 엔진으로써 하이퍼미디어 : <br>
-REST API를 개발할 때 단순히 Client 요청에 대한 데이터만 응답해주는 것이 아닌 관련된 리소스에 대한 Link 정보까지 같이 포함되어야 한다.</li>
+- 자원의 식별 :   
+웹 기반의 REST에서는 리소스 접근을 할 때 URI를 사용한다.
+- 메시지를 통한 리소스 조작 :   
+Web에서는 다양한 방식으로 데이터를 전달하는데 그 중에서 가장 많이 사용하는 방식은 HTML, XML, JSON, TEXT 등이 있다. 이 중에서 어떠한 타입의 데이터인지 알려주기 위해서 HTTP Header 부분에 content-type을 통해 데이터의 타입을 지정해줄 수 있다. 또한 리소스 조작을 위해 데이터 전체를 전달하지 않고 메세지 형태로 데이터를 주고받으로, client-server가 독립적으로 확장 가능하도록 한다.
+- 자기 서술적 메세지 :   
+요청하는 데이터가 어떻게 처리되어져야 하는지 충분한 데이터를 포함할 수 있어야 한다. HTTP 기반의 REST에서는 HTTP Method와 Header 정보, URI에 포함되는 정보로 표현할 수 있다. 그 외에 담지 못한 정보들은 URI의 메세지를 통하여 표현한다.
+- Application 상태에 대한 엔진으로써 하이퍼미디어 :   
+REST API를 개발할 때 단순히 Client 요청에 대한 데이터만 응답해주는 것이 아닌 관련된 리소스에 대한 Link 정보까지 같이 포함되어야 한다.
 </details>
 <br>
 
@@ -288,67 +327,77 @@ URL은 URI의 하위 개념이다.
 </details>
 <details>
 <summary>URI(Uniform Resource Identifier)</summary>
+
 인터넷에서 특정 자원을 나타내는 주소값으로 해당 값은 유일하다(응답은 달라질 수 있음).
-<li>요청: https://www.ex.co.kr/resource/sample/1</li>
-<li>응답: example.pdf, example.doc</li>
+- 요청: https://www.ex.co.kr/resource/sample/1
+- 응답: example.pdf, example.doc
 </details>
 <details>
 <summary>URL(Uniform Resource Locator)</summary>
+
 인터넷 상에서의 자원, 특정 파일이 어디에 위치하는지 식별하는 주소이다.
-<li>요청: https://www.ex.co.kr/example.pdf</li>
+- 요청: https://www.ex.co.kr/example.pdf
 </details>
 <details>
 <summary>URI 설계 원칙(RFC-3986)</summary>
-<li>슬래시 구분자(/)는 계층 관계를 나타내는 데 사용한다.<br>
-https://ex.co.kr/classes<b>/</b>java<b>/</b>curriculums</li>
-<li>URI 마지막 문자로 /는 포함하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums<b>/</b> (X)</li>
-<li>하이픈(-)은 URI 가독성을 높이는 데 사용한다.<br>
-https://ex.co.kr/classes/java/curriculums/web<b>-</b>master</li>
-<li>언더바(_)는 사용하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web<b>_</b>master (X)</li>
-<li>URI 경로에는 소문자가 적합하다.<br>
-https://ex.co.kr/classes/<b>JAVA</b>/curriculums/web-master (X)</li>
-<li>파일 확장자는 URI에 포함하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master.jsp (X)</li>
-<li>프로그래밍 언어에 의존적인 확장자를 사용하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master.do (X)</li>
-<li>구현에 의존적인 경로를 사용하지 않는다.<br>
-https://ex.co.kr/<b>servlet</b>/classes/java/curriculums/web-master (X)</li>
-<li>세션 ID를 포함하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master?<b>session-id=abc</b> (X)</li>
-<li>프로그래밍 언어의 Method명을 이용하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master?<b>action=intro</b> (X)</li>
-<li>명사에 단수형보다는 복수형을 사용한다(컬렉션에 대한 표현은 복수로 사용).<br>
-https://ex.co.kr/class<b>es</b>/java/curriculum<b>s</b>/web-master (X)</li>
-<li>컨트롤러 이름으로는 동사나 동사구를 사용한다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master/re-order</li>
-<li>경로 부분 중 변하는 부분은 유일한 값으로 대체한다.<br>
-.../curriculums/web-master/lessons/<b>{lesson-id}</b>/users/<b>{user-id}</b><br>
-.../curriculums/web-master/lessons/<b>2</b>/users/<b>100</b></li>
-<li>CRUD 기능을 나타내는 것은 URI에 사용하지 않는다.<br>
-GET: .../curriculums/web-master/lessons/2/users/100/READ (X)<br>
-DELETE: .../curriculums/web-master/lessons/2/users/100 (O)</li>
-<li>URI Query Parameter 디자인: URI 쿼리 부분으로 컬렉션 결과에 대해 필터링할 수 있다.<br>
-.../curriculums/web-master?<b>chpater=2</b></li>
-<li>URI 쿼리는 컬렉션의 결과를 페이지로 구분하여 나타내는 데 사용한다.<br>
-.../curriculums/web-master?<b>chapter=2&page=0&size=10&sort=asc</b></li>
-<li>API에 있어서 서브 도메인은 일관성있게 사용해야 한다.<br>
+
+- 슬래시 구분자(/)는 계층 관계를 나타내는 데 사용한다.<br>
+https://ex.co.kr/classes/java/curriculums
+- URI 마지막 문자로 /는 포함하지 않는다.<br>
+https://ex.co.kr/classes/java/curriculums/ (X)
+- 하이픈(-)은 URI 가독성을 높이는 데 사용한다.<br>
+https://ex.co.kr/classes/java/curriculums/web-master
+- 언더바(_)는 사용하지 않는다.<br>
+https://ex.co.kr/classes/java/curriculums/web_master (X)
+- URI 경로에는 소문자가 적합하다.<br>
+https://ex.co.kr/classes/**JAVA**/curriculums/web-master (X)
+- 파일 확장자는 URI에 포함하지 않는다.<br>
+https://ex.co.kr/classes/java/curriculums/web-master.**jsp** (X)
+- 프로그래밍 언어에 의존적인 확장자를 사용하지 않는다.<br>
+https://ex.co.kr/classes/java/curriculums/web-master.**do** (X)
+- 구현에 의존적인 경로를 사용하지 않는다.<br>
+https://ex.co.kr/**servlet**/classes/java/curriculums/web-master (X)
+- 세션 ID를 포함하지 않는다.<br>
+https://ex.co.kr/classes/java/curriculums/web-master?**session-id=abc** (X)
+- 프로그래밍 언어의 Method명을 이용하지 않는다.<br>
+https://ex.co.kr/classes/java/curriculums/web-master?**action=intro** (X)
+- 명사에 단수형보다는 복수형을 사용한다(컬렉션에 대한 표현은 복수로 사용).<br>
+https://ex.co.kr/class**es**/java/curriculum**s**/web-master (X)
+- 컨트롤러 이름으로는 동사나 동사구를 사용한다.<br>
+https://ex.co.kr/classes/java/curriculums/web-master/**re-order**
+- 경로 부분 중 변하는 부분은 유일한 값으로 대체한다.<br>
+.../curriculums/web-master/lessons/**{lesson-id}**/users/**{user-id}**<br>
+.../curriculums/web-master/lessons/**2**/users/**100**
+- CRUD 기능을 나타내는 것은 URI에 사용하지 않는다.<br>
+GET: .../curriculums/web-master/lessons/2/users/100/**READ** (X)<br>
+DELETE: .../curriculums/web-master/lessons/2/users/100 (O)
+- URI Query Parameter 디자인: URI 쿼리 부분으로 컬렉션 결과에 대해 필터링할 수 있다.<br>
+.../curriculums/web-master?**chpater=2**
+- URI 쿼리는 컬렉션의 결과를 페이지로 구분하여 나타내는 데 사용한다.<br>
+.../curriculums/web-master?**chapter=2&page=0&size=10&sort=asc**
+- API에 있어서 서브 도메인은 일관성있게 사용해야 한다.<br>
 https://ex.co.kr<br>
 https://api.ex.co.kr<br>
-https://api-ex.co.kr</li>
-<li>클라이언트 개발자 포탈 서브 도메인은 일관성있게 만든다.<br>
+https://api-ex.co.kr
+- 클라이언트 개발자 포탈 서브 도메인은 일관성있게 만든다.<br>
 https://dev-ex.co.kr<br>
-https://developer-ex.co.kr</li>
+https://developer-ex.co.kr
 </details>
 <br>
 
 ### HTTP Protocol
-HTTP(Hyper Text Trasfer Protocol)로 RFC-2616에서 규정된 Web에서 데이터를 주고받는 프로토콜이다. 이름은 하이퍼텍스트 전송용 프로토콜로 정의되어 있지만 실제로는 HTML, XML, JSON, Image, Voice, Video, Javascript, PDF 등 다양한 컴퓨터에서 다룰 수 있는 것은 모두 전송할 수 있다. HTTP는 TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web기반의 프로토콜로 메세지를 주고(Request) 받는(Response) 형태의 통신 방법이다.
+<details>
+<summary>HTTP Protocol이란?</summary>
 
+HTTP(Hyper Text Trasfer Protocol)로 RFC-2616에서 규정된 Web에서 데이터를 주고받는 프로토콜이다.   
+이름은 하이퍼텍스트 전송용 프로토콜로 정의되어 있지만 실제로는 HTML, XML, JSON, Image, Voice, Video, Javascript, PDF 등 다양한 컴퓨터에서 다룰 수 있는 것은 모두 전송할 수 있다.   
+HTTP는 TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web기반의 프로토콜로 메세지를 주고(Request) 받는(Response) 형태의 통신 방법이다.
+</details>
 <details>
 <summary>HTTP의 요청을 특정하는 Method: REST를 구현하기 위한 인터페이스</summary>
+
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
+|:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
 |GET|리소스 취득|R|O|O|O|O|X|
 |POST|리소스 생성, 주가|C|X|X|O|△|O|
 |PUT|리소스 갱신, 생성|C/U|O|X|O|△|O|
@@ -360,10 +409,12 @@ HTTP(Hyper Text Trasfer Protocol)로 RFC-2616에서 규정된 Web에서 데이�
 </details>
 <details>
 <summary>HTTP Status Code: 응답의 상태를 나타내는 코드</summary>
-|   |의미|내용|
+
+|코드|의미|내용|
+|:-:|:-:|-|
 |1XX|처리중|처리가 계속되고 있는 상태. 클라이언트는 요청을 계속하거나 서버의 지시에 따라서 재요청|
 |2XX|성공|요청의 성공|
-|200|성공||
+|200|성공|성공|
 |201|성공|리소스 생성 성공|
 |3XX|리다이렉트|다른 리소스로 리다이렉트. 해당 코드를 받았을 때는 Response의 새로운 주소로 다시 요청|
 |301|리다이렉트|리소스가 다른 장소로 변경됨을 알림|
@@ -379,8 +430,11 @@ HTTP(Hyper Text Trasfer Protocol)로 RFC-2616에서 규정된 Web에서 데이�
 <br>
 <br>
 
-
 ## Spring
+
+<details>
+<summary>Spring이란?</summary>
+
 - Spring 1.0 버전은 2004년 3월 출시되었으며, 지난 20년 가까이의 세월 동안 자바 엔터프라이즈 어플리케이션 개발의 최고의 자리를 차지했다.
 - 스프링 프레임워크는 20여 가지의 모듈로로 구성되어 있고, 이러한 모듈들은 스프링의 핵심 기능(DI, AOP 등)을 제공해주며 필요한 모듈만 선택하여 사용 가능하다.
 - 현재 단일 아키텍쳐(모놀리스) 마이크로 서비스 아키텍쳐로 변환 중이며 여기에 맞춰 스프링도 진화하고 있는 상태이다.
@@ -389,29 +443,49 @@ HTTP(Hyper Text Trasfer Protocol)로 RFC-2616에서 규정된 Web에서 데이�
 - 2000년대 초의 자바 EE 어플리케이션은 작성, 테스트가 매우 어려웠으며 한 번 테스트 하기가 번거로웠다. 이로 인하여 느슨한 결합이 된 어플리케이션 개발이 힘든 상태였으며, 특히 데이터베이스와 같이 외부에 의존성을 두는 경우 단위테스트가 불가능했다.
 - 스프링과 다른 프레임워크의 가장 큰 차이점은 IoC를 통한 개발의 진행이다.
 - AOP를 사용하여 로깅, 트랜잭션 관리, 시큐리티에서의 적용 등 AspectJ와 같이 완벽하게 구현된 AOP와 통합하여 사용 가능하다.
+</details>
+<details>
+<summary>Spring POJO</summary>
 
-Spring POJO
 - IoC / DI: 의존 관계 주입
 - AOP: 관점 중심 프로그램
 - PSA: 이식 가능한 추상화
+</details>
+<br>
 
-### IoC(Inversion of Control)
-스프링에서는 일반적인 자바 객체를 new로 생성하여 개발자가 관리하는 것이 아닌 Spring Container에게 모두 맡긴다. 즉, 개발자에서 프레임워크로 제어의 객체 관리 권한이 넘어가며 이를 "제어의 역전"이라 한다.
+### IoC와 DI
+<details>
+<summary>IoC(Inversion of Control)</summary>
 
-### DI(Dependency Injection)
+스프링에서는 일반적인 자바 객체를 new로 생성하여 개발자가 관리하는 것이 아닌 Spring Container에게 모두 맡긴다.   
+즉, 개발자에서 프레임워크로 제어의 객체 관리 권한이 넘어가며 이를 "제어의 역전"이라 한다.
+</details>
+<details>
+<summary>DI(Dependency Injection)</summary>
+
 장점
 - 의존성으로부터 격리시켜 코드 테스트에 용이하다.
 - DI로 불가능한 상황을 Mock과 같은 기술을 통하여 안정적으로 테스트 가능하다.
 - 코드를 확장하거나 변경할 때 영향을 최소화한다(추상화).
 - 순환 참조를 막을 수 있다.
+</details>
+<br>
 
-### AOP(Aspect Oriented Programming)
-관점지향 프로그램으로 스프링 어플리케이션은 대부분 특별한 경우를 제외하고는 MVC 웹 어플리케이션에서 Web Layer, Business Layer, Data Layer로 정의한다.
+### AOP
+<details>
+<summary>AOP란?</summary>
+
+AOP(Aspect Oriented Programming) : 관점지향 프로그램   
+스프링 어플리케이션은 대부분 특별한 경우를 제외하고는 MVC 웹 어플리케이션에서 Web Layer, Business Layer, Data Layer로 정의한다.
 - Web Layer: REST API를 제공하며, Client 중심의 로직 적용
 - Business Layer: 내부 정책에 따른 logic과 해당 부분 개발
 - Data Layer: 데이터베이스 및 외부와의 연동 처리
+</details>
+<details>
+<summary>주요 Annotation</summary>
 
-주요 Annotation
+|Annotation|Explanation|
+|:-:|-|
 |@Aspect|자바에서 널리 사용하는 AOP 프레임워크에 포함되며, AOP를 정의하는 클래스에 할당|
 |@Pointcut|method, annotation 등 AOP를 적용 시킬 지점을 설정|
 |@Before|메소드 실행 이전|
@@ -419,8 +493,14 @@ Spring POJO
 |@AfterReturing|메소드 호출 성공 실행 시 (Not Throws)|
 |@AfterThrowing|메소드 호출 실패 예외 발생 (Throws)|
 |@Around|Before/After 모두 제어|
+</details>
 
 ### 여러 가지 Annotation
+<details>
+<summary>Click하여 보기</summary>
+
+|Annotation|Explanation|
+|:-:|-|
 |@SpringBootApplication|Spring boot application으로 설정|
 |@Controller|View를 제공하는 controller로 설정|
 |@RestController|REST API를 제공하는 controller로 설정|
@@ -444,45 +524,64 @@ Spring POJO
 |@Around|AOP 이전/이후 모두 포함 예외 발생 포함|
 |@AfterReturning|AOP 메소드의 호출이 정상일 때 실행|
 |@AfterThrowing|AOP 해당 메소드가 예외 발생시 지정|
-
-
+</details>
+<br><br>
 
 ## Spring Boot
-스프링부트는 단순히 실행되며, 프로덕션 제품 수준의 스프링 기반 어플리케이션을 쉽게 만들 수 있다.
-스프링부트 어플리케이션에는 스프링 구성이 거의 필요하지 않다.
+
+<details>
+<summary>Spring Boot</summary>
+
+스프링부트는 단순히 실행되며, 프로덕션 제품 수준의 스프링 기반 어플리케이션을 쉽게 만들 수 있다.   
+스프링부트 어플리케이션에는 스프링 구성이 거의 필요하지 않다.   
 스프링부트 java -jar로 실행하는 자바 어플리케이션을 만들 수 있다.
+</details>
+<details>
+<summary>주요 목표</summary>
 
-주요 목표
-스프링 개발에 대해 빠르고 광범위하게 적용할 수 있는 환경
-기본값 설정이 있지만 설정을 바꿀 수 있음
-대규모 프로젝트에 공통적인 비기능 제공 (보안, 모니터링 등)
-XML 구성 요구사항이 전혀 없음
+- 스프링 개발에 대해 빠르고 광범위하게 적용할 수 있는 환경
+- 기본값 설정이 있지만 설정을 바꿀 수 있음
+- 대규모 프로젝트에 공통적인 비기능 제공 (보안, 모니터링 등)
+- XML 구성 요구사항이 전혀 없음
+</details>
+<details>
+<summary>장점</summary>
 
-장점
-어플리케이션 개발에 필수 요소들만 모아두었다.
-간단한 설정으로 개발 및 커스텀이 가능하다.
-간단하고 빠르게 어플리케이션 실행 및 배포가 가능하다.
-대규모 프로젝트(운영환경)에 필요한 비 기능적 기능도 제공한다.
-오랜 경험에서 나오는 안정적인 운영이 가능하다.
-스프링에서 불편한 설정(XML 설정 등)이 없어졌다.
+- 어플리케이션 개발에 필수 요소들만 모아두었다.
+- 간단한 설정으로 개발 및 커스텀이 가능하다.
+- 간단하고 빠르게 어플리케이션 실행 및 배포가 가능하다.
+- 대규모 프로젝트(운영환경)에 필요한 비 기능적 기능도 제공한다.
+- 오랜 경험에서 나오는 안정적인 운영이 가능하다.
+- 스프링에서 불편한 설정(XML 설정 등)이 없어졌다.
+</details>
+<br>
 
+### REST API Annotation
+<details>
+<summary>GET API</summary>
 
-### GET API
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
+|:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
 |GET|리소스 취득|R|O|O|O|O|X|
 
+|Annotation|Explanation|
+|:-:|-|
 |@RestController|Rest API 설정|
 |@RequestMapping|리소스 설정(method로 구분 가능)|
 |@GetMapping|Get Resource 설정|
 |@RequestParam|URL Query Param Parsing|
 |@PathVariable|URL Path Variable Parsing|
 |Object|Query Param Object로 Parsing|
+</details>
+<details>
+<summary>POST API</summary>
 
-
-### POST API
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
+|:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
 |POST|리소스 생성, 주가|C|X|X|O|△|O|
 
+|Annotation|Explanation|
+|:-:|-|
 |@RestController|Rest API 설정|
 |@RequestMapping|리소스 설정(method로 구분 가능)|
 |@PostMapping|Post Resource 설정|
@@ -490,27 +589,40 @@ XML 구성 요구사항이 전혀 없음
 |@PathVariable|URL Path Variable Parsing|
 |@JsonProperty|json naming|
 |@JsonNaming|class json naming|
+</details>
+<details>
+<summary>PUT API</summary>
 
-### PUT API
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
+|:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
 |PUT|리소스 갱신, 생성|C/U|O|X|O|△|O|
 
+|Annotation|Explanation|
+|:-:|-|
 |@RestController|Rest API 설정|
 |@RequestMapping|리소스 설정(method로 구분 가능)|
 |@PutMapping|Put Resource 설정|
 |@RequestBody|Request Body 부분 Parsing|
 |@PathVariable|URL Path Variable Parsing|
+</details>
+<details>
+<summary>DELETE API</summary>
 
-### DELETE API
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
+|:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
 |DELETE|리소스 삭제|D|O|X|O|O|X|
 
+|Annotation|Explanation|
+|:-:|-|
 |@RestController|Rest API 설정|
 |@RequestMapping|리소스 설정(method로 구분 가능)|
 |@DeleteMapping|Delete Resource 설정|
 |@RequestParam|URL Query Param Parsing|
 |@PathVariable|URL Path Variable Parsing|
 |Object|Query Param Object로 Parsing|
+</details>
+
+
 
 ### Response 내려주기
 |String|일반 Text Type 응답|
@@ -544,9 +656,14 @@ Validation은 프로그래밍에 있어서 가장 필요한 부분이다. 특히
 |@AssertTrue / False|별도 Logic 적용|
 |@Valid|해당 object validation 실행|
 
-- gradle dependecies
+
+Custom Validation
+- AssertTrue / False와 같은 method 지정을 통해서 Custom Logic 적용 가능
+- ConstraintValidator를 적용하여 재사용이 가능한 Custom Logic 적용 가능
+
+- gradle dependecies   
 implementation("org.springframework.boot:spring-boot-starter-validation")
-- bean validation spec
+- bean validation spec   
 https://beanvalidation.org/2.0-jsr380
 
 
@@ -588,3 +705,4 @@ Spring Boot에서는 간단하게 springfox-boot-starter를 gradle dependencies�
 |@ApiModelProperty|모델의 속성 데이터 설명|
 |@ApiImplicitParam|메소드 단위의 오퍼레이션 파라미터 설명|
 |@ApiImplicitParams||
+    
