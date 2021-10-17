@@ -25,19 +25,19 @@ Java는 1995년 Sun Microsystems에서 작은 언어를 지향하는 객체지�
 
 ### 객체의 3가지 요소
 <details>
-<summary><b>상태 유지 (객체의 상태)</b></summary>
+<summary><b>객체의 상태</b> (상태 유지)</b></summary>
 
 객체는 상태 정보를 저장하고, 유지되어져야 하며 이러한 속성(Variable)은 변수로 정의되어져야 한다.    
 이러한 속성값이 바뀜으로 인하여, 객체의 상태가 변경될 수 있어야 한다.
 </details>
 <details>
-<summary><b>기능 제공 (객체의 책임)</b></summary>
+<summary><b>객체의 책임</b> (기능 제공)</summary>
 
 객체는 기능을 제공해야 한다. 이 부분은 Method의 제공으로 이루어진다.   
 이 부분은 캡슐화와 연관이 있으며, 외부로부터 직접 속성에 접근하여 변경하는 것이 아닌 객체가 제공하는 Method로 기능이 제공되어져야 한다.
 </details>
 <details>
-<summary><b>고유 식별자 제공 (객체의 유일성)</b></summary>
+<summary><b>객체의 유일성</b> (고유 식별자 제공)</summary>
 
 각각의 객체는 고유한 식별자를 가져야 한다.   
 예를 들면 카드번호, 계좌번호, 자동차번호와 같은 속성을 통해서 각각 고유한 값을 줄 수 있으며,   
@@ -50,7 +50,7 @@ Java는 1995년 Sun Microsystems에서 작은 언어를 지향하는 객체지�
 <summary><b>물리 객체</b></summary>
 
 물리적 객체는 실제로 사물이 존재하며, 이를 클래스로 정의한 객체를 의미한다.   
-ex) 자동차 렌탈 시스템: 자동차, 고객, 직원, 사업장, 정비소 등
+ex) 자동차 렌탈 시스템 : 자동차, 고객, 직원, 사업장, 정비소 등
 </details>
 <details>
 <summary><b>개념 객체</b></summary>
@@ -58,7 +58,7 @@ ex) 자동차 렌탈 시스템: 자동차, 고객, 직원, 사업장, 정비소 
 웹 시스템에서 Service에 해당되며, 이는 Busineww logic을 처리하는 부분을 의미한다.   
 Business logic에서는 여러 객체를 서로 상호작용하도록 하며,   
 객체가 제공하는 오퍼레이션 Method를 통하여 객체의 속성을 변경한다.   
-ex) 사용자 관리 시스템: 사용자 객체의 마지막 접속일자를 이용하여 계정만료, 비밀번호 초기화, 재등록 처리 등
+ex) 사용자 관리 시스템 : 사용자 객체의 마지막 접속일자를 이용하여 계정만료, 비밀번호 초기화, 재등록 처리 등
 </details>
 <br>
 
@@ -66,10 +66,10 @@ ex) 사용자 관리 시스템: 사용자 객체의 마지막 접속일자를 �
 <details>
 <summary><b>캡슐화</b></summary>
 객체의 속성(Variable)을 보호하기 위해서 사용한다.
-<br>
+<br><br>
 <p>
-Method 설계
 
+**Method 설계**
 - 속성이 선언되었으나, 이의 상태를 변경하는 Method가 없다면, 잘못 선언된 속성이다. 즉, 자신이 가지고 있는 속성에 대해서는 해당 상태를 변경하는 기능을 제공해야 한다.
 - 실물 객체가 가진 기능을 모두 제공해야 한다.
 - 각각의 Method는 서로 관련성이 있어야 한다.
@@ -79,14 +79,14 @@ Method 설계
 - Method의 속성은 반드시 1개에 속할 필요는 없으며, 여러 속성에 해당될 수 있다.
 </p>
 <p>
-장점
 
+**장점**
 - 객체지향의 패러다임 중 하나인 추상화를 제공한다. 실제로 Method가 어떻게 동작하는지 외부에서는 이해할 필요가 없으며, 이를 단순 호출만으로 해당 기능을 실행할 수 있고, 이를 통해서 객체 단위로 프로그램 설계가 가능하다.
 - 재사용성과 유지보수의 효율성이 향상된다. 한 객체에 관련된 속성 및 Method는 모두 캡슐화의 형태로 제공되므로, 객체의 모듈성과 응집도가 높아진다. 만일 절차적 프로그래밍에서 Method를 재사용한다면, 함수가 참조하고 있는 전역변수 및 내부에서 호출하는 Method가 미치는 영향을 모두 체크해야 하나, 객체의 경우는 단일 객체에만 영향을 주기에 재사용성이 높다.
 </p>
 <p>
-무결성
 
+**무결성**
 - 보통의 캡슐화 코딩이라고 하면 주로 변수는 private로 Method를 public으로 선언하는 형태를 많이 가지게 되는데, 이는 객체의 무결성을 위함이다.
 - Getter/Setter를 제외하고는 public method는 입력된 매개변수를 Validation 한 후에 실행하는 것을 기본으로 한다.
 - Validation을 통하여, 객체의 값을 바꾸거나 값에 대한 유효성을 가질 수 있다.
@@ -95,9 +95,11 @@ Method 설계
 <details>
 <summary><b>상속</b></summary>
 객체지향에서의 상속은, 속성의 상속이 아닌 하위로 내려갈수록 구체화되는 것이다.
-<p>
-상속의 효과
+<br><br>
 
+<p>
+
+**상속의 효과**
 - 프로그램 구조에 대한 이해도가 향상된다. 최상위 클래스의 구조를 보고, 하위 클래스의 동작을 이해할 수 있다.
 - 재사용성이 높아진다. 상속을 이용하여 해당 클래스에 필요한 속성과 메소드를 모두 정의하지 않고, 상속을 받아 사용할 수 있다.
 - 확장성이 높아진다. 일관된 형태의 클래스 객체를 추가할 수 있어, 간단하게 프로그램 확장이 가능하다.
@@ -119,51 +121,60 @@ Method 설계
 <summary><b>결합도와 응집도</b></summary>
 
 좋은 소프트웨어 설계를 위해서는 결합도(coupling)는 낮추고 응집도(cohesion)는 높여야 한다.   
-- 결합도: 모듈(클래스) 간의 상호 의존 정도를 나타내는 지표로써 결합도가 낮으면 모듈간의 상호 의존성이 줄어들어서 객체의 재사용 및 유지보수가 유리하다.   
-- 응집도: 하나의 모듈 내부에 존재하는 구성 요소들의 기능적 관련성으로 응집도가 높은 모듈은 하나의 책임에 집중하고 독립성이 높아져 재사용 및 유지보수가 용이하다.
+- **결합도** : 모듈(클래스) 간의 상호 의존 정도를 나타내는 지표로써 결합도가 낮으면 모듈간의 상호 의존성이 줄어들어서 객체의 재사용 및 유지보수가 유리하다.   
+- **응집도**: 하나의 모듈 내부에 존재하는 구성 요소들의 기능적 관련성으로 응집도가 높은 모듈은 하나의 책임에 집중하고 독립성이 높아져 재사용 및 유지보수가 용이하다.
 </details>
 
 #### SOLID
 <details>
-<summary><b>SRP(Single Responsibility Principle): 단일 책임 원칙</b></summary>
+<summary><b>SRP</b>(Single Responsibility Principle): 단일 책임 원칙</summary>
 어떠한 클래스를 변경해야 하는 이유는 한가지 뿐이어야 한다.
 </details>
 <details>
-<summary><b>OCP(Open Closed Principle): 개방 폐쇄 원칙</b></summary>
-자신의 확장에는 열려있고, 주변의 변화에 대해서는 닫혀있어야 한다. 상위 클래스 또는 인터페이스를 중간에 둠으로써 자신은 변화에 대해서 폐쇄적이지만, 인터페이스는 외부의 변화에 대해서 확장을 개방해줄 수 있다. 이러한 부분은 JDBC와 Mybatis, Hibernate 등 Java에서는 Stream(Input/Out)에서 찾아볼 수 있다.
+<summary><b>OCP</b>(Open Closed Principle): 개방 폐쇄 원칙</summary>
+
+자신의 확장에는 열려있고, 주변의 변화에 대해서는 닫혀있어야 한다.   
+상위 클래스 또는 인터페이스를 중간에 둠으로써 자신은 변화에 대해서 폐쇄적이지만,   
+인터페이스는 외부의 변화에 대해서 확장을 개방해줄 수 있다.   
+이러한 부분은 JDBC와 Mybatis, Hibernate 등 Java에서는 Stream(Input/Out)에서 찾아볼 수 있다.
 </details>
 <details>
-<summary><b>LSP(Liskov Substitution Priciple): 리스코프 치환 원칙</b></summary>
+<summary><b>LSP</b>(Liskov Substitution Priciple): 리스코프 치환 원칙</summary>
 서브 타입은 언제나 자신 기반(상위) 타입으로 교체할 수 있어야 한다.
 </details>
 <details>
-<summary><b>ISP(Interface Segregation Principle): 인터페이스 분리 원칙</b></summary>
-클라이언트는 자신이 사용하지 않는 메서드에 의존 관계를 맺으면 안된다. 프로젝트 요구 사항과 설계에 따라서 SRP(단일책임원칙)/ISP(인터페이스분리원칙)를 선택한다.
+<summary><b>ISP</b>(Interface Segregation Principle): 인터페이스 분리 원칙</summary>
+클라이언트는 자신이 사용하지 않는 메서드에 의존 관계를 맺으면 안된다.   
+프로젝트 요구 사항과 설계에 따라서 SRP(단일책임원칙)/ISP(인터페이스분리원칙)를 선택한다.
 </details>
 <details>
-<summary><b>DIP(Dependency Inversion Principle): 의존 역전 원칙</b></summary>
+<summary><b>DIP</b>(Dependency Inversion Principle): 의존 역전 원칙</summary>
 자신보다 변하기 쉬운 것에 의존하지 말아야 한다.
 </details>
 <br>
 
-### POJO(Plain Old Java Object) Java
+### POJO Java
 <details>
-<summary><b>POJO란?</b></summary>
+<summary><b>POJO(Plain Old Java Object)</b></summary>
 순수한 자바 오브젝트를 뜻한다.
 </details>
 <details>
-<summary><b>특정 규약에 종속되지 않는다.</b></summary>
-특정 Library, Module에서 정의된 클래스를 상속받아서 구현하지 않아도 된다. POJO가 되기 위해서는 외부에 의존성을 두지 않고, 순수한 Java로 구성이 가능해야 한다.
-</details>
-<details>
-<summary><b>특정 환경에 종속되지 않는다.</b></summary>
-만일 특정 비즈니스 로직을 처리하는 부분에 외부 종속적인 http request, session 등이 있다면 POJO를 위배한 것으로 간주한다. 또한 많이 사용하고 있는 @Annotation 기반으로 설정하는 부분도 엄연히는 POJO라고 볼 수 없다.
+<summary><b>특징</b></summary>
+
+- 특정 규약에 종속되지 않는다.  
+특정 Library, Module에서 정의된 클래스를 상속받아서 구현하지 않아도 된다.   
+POJO가 되기 위해서는 외부에 의존성을 두지 않고, 순수한 Java로 구성이 가능해야 한다.
+- 특정 환경에 종속되지 않는다.  
+만일 특정 비즈니스 로직을 처리하는 부분에 외부 종속적인 http request, session 등이 있다면 POJO를 위배한 것으로 간주한다.   
+또한 많이 사용하고 있는 @Annotation 기반으로 설정하는 부분도 엄연히는 POJO라고 볼 수 없다.
 </details>
 
 #### POJO Framework
 <details>
 <summary><b>Spring / Hibernate</b></summary>
-하나의 서비스를 개발하기 위해서는 시스템의 복잡함, 비즈니스 로직의 복잡함 등 다양한 어려움을 맞이하게 된다. 두 프레임워크는 객체지향적인 설계를 하고 있으며, 또한 개발자가 서비스 로직에 집중하고 이를 POJO로 쉽게 개발할 수 있도록 지원하고 있다.
+
+하나의 서비스를 개발하기 위해서는 시스템의 복잡함, 비즈니스 로직의 복잡함 등 다양한 어려움을 맞이하게 된다.   
+두 프레임워크는 객체지향적인 설계를 하고 있으며, 또한 개발자가 서비스 로직에 집중하고 이를 POJO로 쉽게 개발할 수 있도록 지원하고 있다.
 </details>
 <br>
 <br>
@@ -173,25 +184,31 @@ Method 설계
 ### 디자인 패턴
 <details>
 <summary><b>디자인 패턴이란?</b></summary>
-자주 사용하는 설계 패턴을 정형화해서 이를 유형별로 가장 최적의 방법으로 개발을 할 수 있도록 정해둔 설계이다. 알고리즘과 유사하지만 명확하게 정답이 있는 형태는 아니며 프로젝트의 상황에 맞추어 적용 가능하다.
+
+자주 사용하는 설계 패턴을 정형화해서 이를 유형별로 가장 최적의 방법으로 개발을 할 수 있도록 정해둔 설계이다.   
+알고리즘과 유사하지만 명확하게 정답이 있는 형태는 아니며 프로젝트의 상황에 맞추어 적용 가능하다.
 </details>
 <details>
 <summary><b>GOF 디자인 패턴</b></summary>
-소프트웨어를 설계할 때는 기존의 경험이 매우 중요하다. 그러나 모든 사람들이 다양한 경험을 가지고 있을 수는 없다. 이러한 지식을 공유하기 위해서 나온 것이 GOF(Gand of Four)의 디자인 패턴이다. 객체지향 개념에 따른 설계 중 재사용할 경우 유용한 설계를 디자인 패턴으로 정리해둔 것이다. GOF의 디자인 패턴은 총 23개이며, 이를 잘 이해하고 활용한다면 경험이 부족하더라도 좋은 소프트웨어 설계가 가능하다.
+
+소프트웨어를 설계할 때는 기존의 경험이 매우 중요하다. 그러나 모든 사람들이 다양한 경험을 가지고 있을 수는 없다.   
+이러한 지식을 공유하기 위해서 나온 것이 GOF(Gand of Four)의 디자인 패턴이다.   
+객체지향 개념에 따른 설계 중 재사용할 경우 유용한 설계를 디자인 패턴으로 정리해둔 것이다.   
+GOF의 디자인 패턴은 총 23개이며, 이를 잘 이해하고 활용한다면 경험이 부족하더라도 좋은 소프트웨어 설계가 가능하다.
 </details>
 <details>
 <summary><b>장점 및 단점</b></summary>
 <p>
-장점
 
+**장점**
 - 개발자(설계자) 간의 원활한 소통
 - 소프트웨어 구조 파악 용이
 - 재사용을 통한 개발 시간 단축
 - 설계 변경 요청에 대한 유연한 대처
 </p>
 <p>
-단점
 
+**단점**
 - 객체지향 설계/구현
 - 초기 투자 비용 부담
 <p>
@@ -282,51 +299,51 @@ Web(World Wide Web, WWW, W3)은 인터넷에 연결된 컴퓨터를 통해 사�
 <details>
 <summary><b>Web의 용도</b></summary>
 
-- Web Site :   
+- **Web Site** :   
 google, naver, daum, facebook 등 HTML로 구성된 여러 사이트들
-- API(Application Programming Interface) * Web Service :   
+- **API**(Application Programming Interface) * **Web Service** :   
 Google Open API, Naver Open API, Kakao Open API 등
-- User Interface :   
+- **User Interface** :   
 Chrome, Safari, Explorer, Smart Watch, IP TV 등
 </details>
 <details>
 <summary><b>Web의 기반</b></summary>
 
-- HTTP(Hypertext Transfer Protocol) : 
+- **HTTP**(Hypertext Transfer Protocol) : 
 어플리케이션 컨트롤
-- URI(Uniform Resouce Identifier) : 
+- **URI**(Uniform Resouce Identifier) : 
 리소스 식별자. 모든 정모에 접근할 수 있는 정보
-- HTML(Hyper Text Markp Language) : 
+- **HTML**(Hyper Text Markp Language) : 
 하이퍼미디어 포맷. XML을 바탕으로 한 범용 문서 포맷
 </details>
 <br>
 
 ### REST
 <details>
-<summary><b>REST란?</b></summary>
-REST(Representational State Trasfer)를 직역하면 자원의 상태 전달이며, 네트워크 아키텍쳐를 의미한다.
+<summary><b>REST(Representational State Trasfer)</b></summary>
+직역하면 자원의 상태 전달이며, 네트워크 아키텍쳐를 의미한다.
 </details>
 <details>
-<summary><b>REST 특징</b></summary>
+<summary><b>특징</b></summary>
 
-- Client/Server : 클라이언트와 서버가 서로 독립적으로 분리되어 있어야 한다.
-- Stateless : 요청에 대해서 클라이언트의 상태를 서버에 저장하지 않는다.
-- Cache : 클라이언트는 서버의 응답을 Cache(임시저장) 할 수 있어야 한다.
-- 계층화(Layered System) : 서버와 클라이언트 사이에 방화벽, 게이트웨이, 프록시 등 다양한 계층 형태로 구성이 가능해야 하며, 이를 확장할 수 있어야 한다.
-- 인터페이스 일관성 : 인터페이스의 일관성을 지키고 아키텍쳐를 단순화시켜 작은 단위로 분리하여 클라이언트, 서버가 독립적으로 개선될 수 있어야 한다.
-- Code on Demand(Optional) : 자바 애플릿, 자바스크립트, 플래시 등 특정한 기능을 서버로부터 클라이언트가 전달받아 코드를 실행할 수 있어야 한다.
+- **Client/Server** : 클라이언트와 서버가 서로 독립적으로 분리되어 있어야 한다.
+- **Stateless** : 요청에 대해서 클라이언트의 상태를 서버에 저장하지 않는다.
+- **Cache** : 클라이언트는 서버의 응답을 Cache(임시저장) 할 수 있어야 한다.
+- **계층화(Layered System)** : 서버와 클라이언트 사이에 방화벽, 게이트웨이, 프록시 등 다양한 계층 형태로 구성이 가능해야 하며, 이를 확장할 수 있어야 한다.
+- **인터페이스 일관성** : 인터페이스의 일관성을 지키고 아키텍쳐를 단순화시켜 작은 단위로 분리하여 클라이언트, 서버가 독립적으로 개선될 수 있어야 한다.
+- **Code on Demand(Optional)** : 자바 애플릿, 자바스크립트, 플래시 등 특정한 기능을 서버로부터 클라이언트가 전달받아 코드를 실행할 수 있어야 한다.
 </details>
 <details>
 <summary><b>인터페이스 일관성</b></summary>
 
 아래의 조건들을 잘 갖춘 경우 RESTful하다고 표현하고 이를 REST API라고 부른다.
-- 자원의 식별 :   
+- **자원의 식별** :   
 웹 기반의 REST에서는 리소스 접근을 할 때 URI를 사용한다.
-- 메시지를 통한 리소스 조작 :   
+- **메시지를 통한 리소스 조작** :   
 Web에서는 다양한 방식으로 데이터를 전달하는데 그 중에서 가장 많이 사용하는 방식은 HTML, XML, JSON, TEXT 등이 있다. 이 중에서 어떠한 타입의 데이터인지 알려주기 위해서 HTTP Header 부분에 content-type을 통해 데이터의 타입을 지정해줄 수 있다. 또한 리소스 조작을 위해 데이터 전체를 전달하지 않고 메세지 형태로 데이터를 주고받으로, client-server가 독립적으로 확장 가능하도록 한다.
-- 자기 서술적 메세지 :   
+- **자기 서술적 메세지** :   
 요청하는 데이터가 어떻게 처리되어져야 하는지 충분한 데이터를 포함할 수 있어야 한다. HTTP 기반의 REST에서는 HTTP Method와 Header 정보, URI에 포함되는 정보로 표현할 수 있다. 그 외에 담지 못한 정보들은 URI의 메세지를 통하여 표현한다.
-- Application 상태에 대한 엔진으로써 하이퍼미디어 :   
+- **Application 상태에 대한 엔진으로써 하이퍼미디어** :   
 REST API를 개발할 때 단순히 Client 요청에 대한 데이터만 응답해주는 것이 아닌 관련된 리소스에 대한 Link 정보까지 같이 포함되어야 한다.
 </details>
 <br>
@@ -350,7 +367,7 @@ URL은 URI의 하위 개념이다.
 - 요청: https://www.ex.co.kr/example.pdf
 </details>
 <details>
-<summary><b>URI 설계 원칙(RFC-3986)</b></summary>
+<summary><b>URI 설계 원칙 (RFC-3986)</b></summary>
 
 - 슬래시 구분자(/)는 계층 관계를 나타내는 데 사용한다.<br>
 https://ex.co.kr/classes/java/curriculums
@@ -361,21 +378,21 @@ https://ex.co.kr/classes/java/curriculums/web-master
 - 언더바(_)는 사용하지 않는다.<br>
 https://ex.co.kr/classes/java/curriculums/web_master (X)
 - URI 경로에는 소문자가 적합하다.<br>
-https://ex.co.kr/classes/**JAVA**/curriculums/web-master (X)
+https://ex.co.kr/classes/JAVA/curriculums/web-master (X)
 - 파일 확장자는 URI에 포함하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master.**jsp** (X)
+https://ex.co.kr/classes/java/curriculums/web-master.jsp (X)
 - 프로그래밍 언어에 의존적인 확장자를 사용하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master.**do** (X)
+https://ex.co.kr/classes/java/curriculums/web-master.do (X)
 - 구현에 의존적인 경로를 사용하지 않는다.<br>
-https://ex.co.kr/**servlet**/classes/java/curriculums/web-master (X)
+https://ex.co.kr/servlet/classes/java/curriculums/web-master (X)
 - 세션 ID를 포함하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master?**session-id=abc** (X)
+https://ex.co.kr/classes/java/curriculums/web-master?session-id=abc (X)
 - 프로그래밍 언어의 Method명을 이용하지 않는다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master?**action=intro** (X)
+https://ex.co.kr/classes/java/curriculums/web-master?action=intro (X)
 - 명사에 단수형보다는 복수형을 사용한다(컬렉션에 대한 표현은 복수로 사용).<br>
-https://ex.co.kr/class**es**/java/curriculum**s**/web-master (X)
+https://ex.co.kr/classes/java/curriculums/web-master (X)
 - 컨트롤러 이름으로는 동사나 동사구를 사용한다.<br>
-https://ex.co.kr/classes/java/curriculums/web-master/**re-order**
+https://ex.co.kr/classes/java/curriculums/web-master/re-order
 - 경로 부분 중 변하는 부분은 유일한 값으로 대체한다.<br>
 .../curriculums/web-master/lessons/**{lesson-id}**/users/**{user-id}**<br>
 .../curriculums/web-master/lessons/**2**/users/**100**
@@ -396,13 +413,11 @@ https://developer-ex.co.kr
 </details>
 <br>
 
-### HTTP Protocol
+### HTTP
 <details>
-<summary><b>HTTP Protocol이란?</b></summary>
+<summary><b>HTTP(Hyper Text Trasfer Protocol)</b></summary>
 
-HTTP(Hyper Text Trasfer Protocol)로 RFC-2616에서 규정된 Web에서 데이터를 주고받는 프로토콜이다.   
-이름은 하이퍼텍스트 전송용 프로토콜로 정의되어 있지만 실제로는 HTML, XML, JSON, Image, Voice, Video, Javascript, PDF 등 다양한 컴퓨터에서 다룰 수 있는 것은 모두 전송할 수 있다.   
-HTTP는 TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web기반의 프로토콜로 메세지를 주고(Request) 받는(Response) 형태의 통신 방법이다.
+RFC-2616에서 규정된 Web에서 데이터를 주고받는 프로토콜이다. 이름은 하이퍼텍스트 전송용 프로토콜로 정의되어 있지만 실제로는 HTML, XML, JSON, Image, Voice, Video, Javascript, PDF 등 다양한 컴퓨터에서 다룰 수 있는 것은 모두 전송할 수 있다. TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web기반의 프로토콜로 메세지를 주고(Request) 받는(Response) 형태의 통신 방법이다.
 </details>
 <details>
 <summary><b>HTTP 요청 Method</b></summary>
@@ -410,14 +425,14 @@ HTTP는 TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web
 REST를 구현하기 위한 인터페이스
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
-|GET|리소스 취득|R|O|O|O|O|X|
-|POST|리소스 생성, 주가|C|X|X|O|△|O|
-|PUT|리소스 갱신, 생성|C/U|O|X|O|△|O|
-|DELETE|리소스 삭제|D|O|X|O|O|X|
-|HEAD|헤더 데이터 취득|-|O|O|-|-|-|
-|OPTIONS|지원하는 메소드 취득|-|O|-|-|-|-|
-|TRACE|요청메세지 반환|-|O|-|-|-|-|
-|CONNECT|프록시 동작의 터널 접속으로 변경|-|X|-|-|-|-|
+|**GET**|리소스 취득|R|O|O|O|O|X|
+|**POST**|리소스 생성, 주가|C|X|X|O|△|O|
+|**PUT**|리소스 갱신, 생성|C/U|O|X|O|△|O|
+|**DELETE**|리소스 삭제|D|O|X|O|O|X|
+|**HEAD**|헤더 데이터 취득|-|O|O|-|-|-|
+|**OPTIONS**|지원하는 메소드 취득|-|O|-|-|-|-|
+|**TRACE**|요청메세지 반환|-|O|-|-|-|-|
+|**CONNECT**|프록시 동작의 터널 접속으로 변경|-|X|-|-|-|-|
 </details>
 <details>
 <summary><b>HTTP Status Code</b></summary>
@@ -425,18 +440,18 @@ REST를 구현하기 위한 인터페이스
 응답의 상태를 나타내는 코드
 |코드|의미|내용|
 |:-:|:-:|-|
-|1XX|처리중|처리가 계속되고 있는 상태. 클라이언트는 요청을 계속하거나 서버의 지시에 따라서 재요청|
-|2XX|성공|요청의 성공|
+|**1XX**|처리중|처리가 계속되고 있는 상태. 클라이언트는 요청을 계속하거나 서버의 지시에 따라서 재요청|
+|**2XX**|성공|요청의 성공|
 |200|성공|성공|
 |201|성공|리소스 생성 성공|
-|3XX|리다이렉트|다른 리소스로 리다이렉트. 해당 코드를 받았을 때는 Response의 새로운 주소로 다시 요청|
+|**3XX**|리다이렉트|다른 리소스로 리다이렉트. 해당 코드를 받았을 때는 Response의 새로운 주소로 다시 요청|
 |301|리다이렉트|리소스가 다른 장소로 변경됨을 알림|
 |303|리다이렉트|클라이언트에서 자동으로 새로운 리소스로 요청 처리|
-|4XX|클라이언트 에러|클라이언트의 요청에 에러가 있는 상태. 재전송해도 에러가 해결되지 않음|
+|**4XX**|클라이언트 에러|클라이언트의 요청에 에러가 있는 상태. 재전송해도 에러가 해결되지 않음|
 |400|클라이언트 에러|요청 오류, 파라미터 에러|
 |401|클라이언트 에러|권한 없음(인증 실패)|
 |404|클라이언트 에러|리소스 없음(페이지를 찾을 수 없음)|
-|5XX|서버 에러|서버 처리중 에러가 발생한 상태. 재전송시 에러가 해결될 수도 있음|
+|**5XX**|서버 에러|서버 처리중 에러가 발생한 상태. 재전송시 에러가 해결될 수도 있음|
 |500|서버 에러|서버 내부 에러(서버 동작 처리 에러)|
 |503|서버 에러|서비스 정지(점검 등)|
 </details>
@@ -460,9 +475,9 @@ REST를 구현하기 위한 인터페이스
 <details>
 <summary><b>Spring POJO</b></summary>
 
-- IoC / DI: 의존 관계 주입
-- AOP: 관점 중심 프로그램
-- PSA: 이식 가능한 추상화
+- **IoC / DI** : 의존 관계 주입
+- **AOP** : 관점 중심 프로그램
+- **PSA** : 이식 가능한 추상화
 </details>
 <br>
 
@@ -470,13 +485,12 @@ REST를 구현하기 위한 인터페이스
 <details>
 <summary><b>IoC(Inversion of Control)</b></summary>
 
-스프링에서는 일반적인 자바 객체를 new로 생성하여 개발자가 관리하는 것이 아닌 Spring Container에게 모두 맡긴다.   
-즉, 개발자에서 프레임워크로 제어의 객체 관리 권한이 넘어가며 이를 **제어의 역전**이라 한다.
+스프링에서는 일반적인 자바 객체를 new로 생성하여 개발자가 관리하는 것이 아닌 Spring Container에게 모두 맡긴다. 즉, 개발자에서 프레임워크로 제어의 객체 관리 권한이 넘어가며 이를 **제어의 역전**이라 한다.
 </details>
 <details>
 <summary><b>DI(Dependency Injection)</b></summary>
 
-장점
+**장점**
 - 의존성으로부터 격리시켜 코드 테스트에 용이하다.
 - DI로 불가능한 상황을 Mock과 같은 기술을 통하여 안정적으로 테스트 가능하다.
 - 코드를 확장하거나 변경할 때 영향을 최소화한다(추상화).
@@ -488,8 +502,7 @@ REST를 구현하기 위한 인터페이스
 <details>
 <summary><b>AOP(Aspect Oriented Programming)</b></summary>
 
-관점지향 프로그램을 의미한다.   
-스프링 어플리케이션은 대부분 특별한 경우를 제외하고는 MVC 웹 어플리케이션에서 Web Layer, Business Layer, Data Layer로 정의한다.
+관점지향 프로그램을 의미한다. 스프링 어플리케이션은 대부분 특별한 경우를 제외하고는 MVC 웹 어플리케이션에서 Web Layer, Business Layer, Data Layer로 정의한다.
 - Web Layer: REST API를 제공하며, Client 중심의 로직 적용
 - Business Layer: 내부 정책에 따른 logic과 해당 부분 개발
 - Data Layer: 데이터베이스 및 외부와의 연동 처리
@@ -546,9 +559,9 @@ REST를 구현하기 위한 인터페이스
 <details>
 <summary><b>Spring Boot</b></summary>
 
-스프링부트는 단순히 실행되며, 프로덕션 제품 수준의 스프링 기반 어플리케이션을 쉽게 만들 수 있다.   
-스프링부트 어플리케이션에는 스프링 구성이 거의 필요하지 않다.   
-스프링부트 java -jar로 실행하는 자바 어플리케이션을 만들 수 있다.
+- 스프링부트는 단순히 실행되며, 프로덕션 제품 수준의 스프링 기반 어플리케이션을 쉽게 만들 수 있다.
+- 스프링부트 어플리케이션에는 스프링 구성이 거의 필요하지 않다.
+- 스프링부트 java -jar로 실행하는 자바 어플리케이션을 만들 수 있다.
 </details>
 <details>
 <summary><b>주요 목표</b></summary>
@@ -576,7 +589,7 @@ REST를 구현하기 위한 인터페이스
 
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
-|GET|리소스 취득|R|O|O|O|O|X|
+|**GET**|리소스 취득|R|O|O|O|O|X|
 
 |Annotation|Explanation|
 |:-:|-|
@@ -592,7 +605,7 @@ REST를 구현하기 위한 인터페이스
 
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
-|POST|리소스 생성, 주가|C|X|X|O|△|O|
+|**POST**|리소스 생성, 주가|C|X|X|O|△|O|
 
 |Annotation|Explanation|
 |:-:|-|
@@ -609,7 +622,7 @@ REST를 구현하기 위한 인터페이스
 
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
-|PUT|리소스 갱신, 생성|C/U|O|X|O|△|O|
+|**PUT**|리소스 갱신, 생성|C/U|O|X|O|△|O|
 
 |Annotation|Explanation|
 |:-:|-|
@@ -624,7 +637,7 @@ REST를 구현하기 위한 인터페이스
 
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
-|DELETE|리소스 삭제|D|O|X|O|O|X|
+|**DELETE**|리소스 삭제|D|O|X|O|O|X|
 
 |Annotation|Explanation|
 |:-:|-|
@@ -656,9 +669,7 @@ REST를 구현하기 위한 인터페이스
 <details>
 <summary><b>Validation이란?</b></summary>
 
-Validation은 프로그래밍에 있어서 가장 필요한 부분이다.   
-특히 자바에서는 null 값에 대해서 접근하려고 할 때 null pointer exception이 발생하므로,   
-이러한 부분을 방지하기 위해서 미리 검증하는 과정을 Validation이라고 한다.
+Validation은 프로그래밍에 있어서 가장 필요한 부분이다. 특히 자바에서는 null 값에 대해서 접근하려고 할 때 null pointer exception이 발생하므로, 이러한 부분을 방지하기 위해서 미리 검증하는 과정을 Validation이라고 한다.
 </details>
 <details>
 <summary><b>특징</b></summary>
@@ -696,9 +707,9 @@ Validation은 프로그래밍에 있어서 가장 필요한 부분이다.
 <details>
 <summary><b>etc</b></summary>
 
-- gradle dependecies   
+- **gradle dependecies**   
 implementation("org.springframework.boot:spring-boot-starter-validation")
-- bean validation spec   
+- **bean validation spec**   
 https://beanvalidation.org/2.0-jsr380
 </details>
 <br>
@@ -759,8 +770,7 @@ Filter와 매우 유사한 형태로 존재하지만 Spring Context에 등록된
 <details>
 <summary><b>Swagger란?</b></summary>
 
-개발한 REST API를 편리하게 문서화해주고 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트할 수 있는 프로젝트이다.   
-Spring Boot에서는 간단하게 springfox-boot-starter를 gradle dependencies에 추가하여 사용할 수 있다. 다만, 운영환경과 같은 외부에 노출되면 안되는 곳에 사용할 때는 주의해야 한다.
+개발한 REST API를 편리하게 문서화해주고 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트할 수 있는 프로젝트이다. Spring Boot에서는 간단하게 springfox-boot-starter를 gradle dependencies에 추가하여 사용할 수 있다. 다만, 운영환경과 같은 외부에 노출되면 안되는 곳에 사용할 때는 주의해야 한다.
 </details>
 <details>
 <summary><b>관련 Annotation</b></summary>
