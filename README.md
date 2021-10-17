@@ -149,9 +149,10 @@ Method 설계
 <summary>특정 환경에 종속되지 않는다.</summary>
 만일 특정 비즈니스 로직을 처리하는 부분에 외부 종속적인 http request, session 등이 있다면 POJO를 위배한 것으로 간주한다. 또한 많이 사용하고 있는 @Annotation 기반으로 설정하는 부분도 엄연히는 POJO라고 볼 수 없다.
 </details>
-<br>
+
+#### POJO Framework
 <details>
-<summary>POJO Framework -Spring, Hibernate</summary>
+<summary>Spring / Hibernate</summary>
 하나의 서비스를 개발하기 위해서는 시스템의 복잡함, 비즈니스 로직의 복잡함 등 다양한 어려움을 맞이하게 된다. 두 프레임워크는 객체지향적인 설계를 하고 있으며, 또한 개발자가 서비스 로직에 집중하고 이를 POJO로 쉽게 개발할 수 있도록 지원하고 있다.
 </details>
 <br>
@@ -293,7 +294,7 @@ Chrome, Safari, Explorer, Smart Watch, IP TV 등
 ### REST
 <details>
 <summary>REST란?</summary>
-REST(Representational State Trasfer: 자원의 상태 전달) - 네트워크 아키텍쳐
+REST(Representational State Trasfer)를 직역하면 자원의 상태 전달이며, 네트워크 아키텍쳐를 의미한다.
 </details>
 <details>
 <summary>REST 특징</summary>
@@ -394,8 +395,9 @@ HTTP(Hyper Text Trasfer Protocol)로 RFC-2616에서 규정된 Web에서 데이�
 HTTP는 TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web기반의 프로토콜로 메세지를 주고(Request) 받는(Response) 형태의 통신 방법이다.
 </details>
 <details>
-<summary>HTTP의 요청을 특정하는 Method: REST를 구현하기 위한 인터페이스</summary>
+<summary>HTTP 요청 Method</summary>
 
+REST를 구현하기 위한 인터페이스
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
 |GET|리소스 취득|R|O|O|O|O|X|
@@ -408,8 +410,9 @@ HTTP는 TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web
 |CONNECT|프록시 동작의 터널 접속으로 변경|-|X|-|-|-|-|
 </details>
 <details>
-<summary>HTTP Status Code: 응답의 상태를 나타내는 코드</summary>
+<summary>HTTP Status Code</summary>
 
+응답의 상태를 나타내는 코드
 |코드|의미|내용|
 |:-:|:-:|-|
 |1XX|처리중|처리가 계속되고 있는 상태. 클라이언트는 요청을 계속하거나 서버의 지시에 따라서 재요청|
@@ -473,9 +476,9 @@ HTTP는 TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web
 
 ### AOP
 <details>
-<summary>AOP란?</summary>
+<summary>AOP(Aspect Oriented Programming)</summary>
 
-AOP(Aspect Oriented Programming) : 관점지향 프로그램   
+관점지향 프로그램을 의미한다.   
 스프링 어플리케이션은 대부분 특별한 경우를 제외하고는 MVC 웹 어플리케이션에서 Web Layer, Business Layer, Data Layer로 정의한다.
 - Web Layer: REST API를 제공하며, Client 중심의 로직 적용
 - Business Layer: 내부 정책에 따른 logic과 해당 부분 개발
@@ -494,6 +497,7 @@ AOP(Aspect Oriented Programming) : 관점지향 프로그램
 |@AfterThrowing|메소드 호출 실패 예외 발생 (Throws)|
 |@Around|Before/After 모두 제어|
 </details>
+<br>
 
 ### 여러 가지 Annotation
 <details>
@@ -556,7 +560,7 @@ AOP(Aspect Oriented Programming) : 관점지향 프로그램
 </details>
 <br>
 
-### REST API Annotation
+### REST API 관련 Annotation
 <details>
 <summary>GET API</summary>
 
@@ -621,27 +625,44 @@ AOP(Aspect Oriented Programming) : 관점지향 프로그램
 |@PathVariable|URL Path Variable Parsing|
 |Object|Query Param Object로 Parsing|
 </details>
+<br>
 
+### Response 관련 Class 및 Annotation
+<details>
+<summary>Click하여 보기</summary>
 
-
-### Response 내려주기
+|Class/Annotation|Explanation|
+|:-:|-|
 |String|일반 Text Type 응답|
 |Object|자동으로 Json 변환되어 응답 상태값은 항상 200 OK|
 |ResponseEntity|Body의 내용을 Object로 설정. 상황에 따라서 HTTP Status Code 설정|
 |@ResponseBody|RestController가 아닌 곳(Controller)에서 Json 응답을 내릴 때|
-
-
+</details>
+<br><br>
 
 ## Spring Boot 기능 활용
 
 ### Validation
-Validation은 프로그래밍에 있어서 가장 필요한 부분이다. 특히 자바에서는 null 값에 대해서 접근하려고 할 때 null pointer exception이 발생하므로, 이러한 부분을 방지하기 위해서 미리 검증하는 과정을 Validation이라고 한다.
+<details>
+<summary>Validation이란?</summary>
+
+Validation은 프로그래밍에 있어서 가장 필요한 부분이다.   
+특히 자바에서는 null 값에 대해서 접근하려고 할 때 null pointer exception이 발생하므로,   
+이러한 부분을 방지하기 위해서 미리 검증하는 과정을 Validation이라고 한다.
+</details>
+<details>
+<summary>특징</summary>
 
 - 검증해야할 값이 많은 경우 코드의 길이가 길어진다.
 - Service Logic과의 분리가 필요하다.
 - 흩어져 있는 경우, 어디에서 검증을 하는지 알기 어렵고 재사용의 한계가 있다.
 - 검증 Logic이 변경되는 경우, 테스트 코드 등 참조하는 클래스에서 Logic이 변경되어야 하는 부분이 발생할 수 있다.
+</details>
+<details>
+<summary>관련 Annotation</summary>
 
+|Annotation|Explanation|
+|:-:|-|
 |@Size|문자 길이 측정|
 |@NotNull|null 불가|
 |@NotEmpty|null, "" 불가|
@@ -655,49 +676,87 @@ Validation은 프로그래밍에 있어서 가장 필요한 부분이다. 특히
 |@Min|최솟값|
 |@AssertTrue / False|별도 Logic 적용|
 |@Valid|해당 object validation 실행|
+</details>
+<details>
+<summary>Custom Validation</summary>
 
-
-Custom Validation
 - AssertTrue / False와 같은 method 지정을 통해서 Custom Logic 적용 가능
 - ConstraintValidator를 적용하여 재사용이 가능한 Custom Logic 적용 가능
+</details>
+<details>
+<summary>etc</summary>
 
 - gradle dependecies   
 implementation("org.springframework.boot:spring-boot-starter-validation")
 - bean validation spec   
 https://beanvalidation.org/2.0-jsr380
-
+</details>
+<br>
 
 ### Exception
-Web Application의 입장에서 에러가 났을 때 내려줄 수 있는 방법은 많지 않다.
+<details>
+<summary>Web이 에러를 표현하는 방법</summary>
 
 - 에러 페이지
 - 4XX or 5XX 에러
 - Client가 200 외에 처리를 하지 못할 때는 200을 내려주고 별도의 에러 메세지 전달
+</details>
+<details>
+<summary>관련 Annotation</summary>
+
+|Annotation|Explanation|
+|:-:|-|
 |@ControllerAdvice|Global 예외 처리 및 특정 package/Controller 예외 처리|
 |@ExceptionHandler|특정 Contrller의 예외 처리|
-
+</details>
+<br>
 
 ### Filter
-Filter란 Web Application에서 관리되는 영역으로 스프링부트 프레임워크에서 클라이언트로부터 오는 요청/응답에 대해 최초/최종 단계의 위치에 존재하며, 이를 통해서 요청/응답의 정보를 변경하거나 스프링에 의해서 데이터가 변환되기 전의 순수한 클라이언트의 요청/응답 값을 확인할 수 있다.
+<details>
+<summary>Filter란?</summary>
+Web Application에서 관리되는 영역으로 스프링부트 프레임워크에서 클라이언트로부터 오는 요청/응답에 대해 최초/최종 단계의 위치에 존재하며, 이를 통해서 요청/응답의 정보를 변경하거나 스프링에 의해서 데이터가 변환되기 전의 순수한 클라이언트의 요청/응답 값을 확인할 수 있다.
 유일하게 ServletRequest, ServletResponse의 객체를 변환할 수 있다. 주로 스프링 프레임워크에서는 요청/응답의 logging 용도로 활용하거나 인증과 관련된 logic 들을 해당 Filter에서 처리한다. 이를 선/후 처리 함으로써 Service Business Logic과 분리한다.
+</details>
+<br>
 
 ### Interceptor
-Interceptor란 Filter와 매우 유사한 형태로 존재하지만 Spring Context에 등록된다는 차이점이 있다. AOP와 유사한 기능을 제공할 수 있으며, 주로 인증단계를 처리하거나, logging을 하는 데에 사용한다. 이를 선/후 처리 함으로써 Service Business Logic과 분리한다.
+<details>
+<summary>Interceptor란?</summary>
+Filter와 매우 유사한 형태로 존재하지만 Spring Context에 등록된다는 차이점이 있다. AOP와 유사한 기능을 제공할 수 있으며, 주로 인증단계를 처리하거나, logging을 하는 데에 사용한다. 이를 선/후 처리 함으로써 Service Business Logic과 분리한다.
+</details>
+<br>
 
 ### JUnit Test
-- TDD(Test-driven Development)
-테스트 주도 개발에서 사용하지만, 코드의 유지 보수 및 운영 환경에서의 에러를 미리 방지하기 위해 단위 별로 검증하는 테스트 프레임워크
-- 단위테스트
-작성한 코드가 기대하는 대로 동작을 하는지 검증하는 절차
-- JUnit
-자바 기반의 단위 테스트를 위한 프레임워크로, Annotation 기반으로 테스트를 지원하며, Assert로 (예상, 실제)를 통해 검증
-- Jacoco
-자바 코드의 코드 커버리지를 체크하는 라이브러리이며, html, xml, csv로 결과 확인 가능
+<details>
+<summary>TDD(Test-driven Development)</summary>
+테스트 주도 개발에서 사용하지만, 코드의 유지 보수 및 운영 환경에서의 에러를 미리 방지하기 위해 단위 별로 검증하는 테스트 프레임워크이다.
+</details>
+<details>
+<summary>단위테스트</summary>
+작성한 코드가 기대하는 대로 동작을 하는지 검증하는 절차이다.
+</details>
+<details>
+<summary>JUnit</summary>
+자바 기반의 단위 테스트를 위한 프레임워크로, Annotation 기반으로 테스트를 지원하며, Assert로 (예상, 실제)를 통해 검증한다.
+</details>
+<details>
+<summary>Jacoco</summary>
+자바 코드의 코드 커버리지를 체크하는 라이브러리이며, html, xml, csv로 결과 확인 가능하다.
+</details>
+<br>
 
 ### Swagger
-Swagger란 개발한 REST API를 편리하게 문서화해주고 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트할 수 있는 프로젝트이다.
-Spring Boot에서는 간단하게 springfox-boot-starter를 gradle dependencies에 추가하여 사용할 수 있다. 다만, 운영환경과 같은 외부에 노출되면 안되는 곳에 사용할 때는 주의해야 한다.
+<details>
+<summary>Swagger란?</summary>
 
+개발한 REST API를 편리하게 문서화해주고 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트할 수 있는 프로젝트이다.   
+Spring Boot에서는 간단하게 springfox-boot-starter를 gradle dependencies에 추가하여 사용할 수 있다. 다만, 운영환경과 같은 외부에 노출되면 안되는 곳에 사용할 때는 주의해야 한다.
+</details>
+<details>
+<summary>관련 Annotation</summary>
+
+|Annotation|Explanation|
+|:-:|-|
 |@Api|클래스를 스웨거의 리소스로 표시|
 |@ApiOperation|특정 경로의 오퍼레이션 HTTP 메소드 설명|
 |@ApiParam|오퍼레이션 파라미터에 메타 데이터 설명|
@@ -705,4 +764,5 @@ Spring Boot에서는 간단하게 springfox-boot-starter를 gradle dependencies�
 |@ApiModelProperty|모델의 속성 데이터 설명|
 |@ApiImplicitParam|메소드 단위의 오퍼레이션 파라미터 설명|
 |@ApiImplicitParams||
-    
+</details>
+<br>
