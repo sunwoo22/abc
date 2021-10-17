@@ -14,49 +14,59 @@
 ## 객체지향
 
 <details>
-<summary>객체지향의 등장</summary>
+<summary><b>객체지향의 등장</b></summary>
 
-이전에는 C언어처럼 실행하고자 하는 순서대로 명령어를 입력해서 실행되는 "절차 지향"이 주를 이뤘으며, 이러한 방법으로 코딩하는 언어를 "절차지향 언어"라고 한다. 이 때에는 프로그램의 단위가 크지 않았으며, 대체적으로 간단한 Logic을 순차적으로 처리하여 결과를 얻는데 그쳤지만, 점점 컴퓨터의 발전과 이로 인하여 프로그램의 복잡도가 증가하면서 이에 들어가는 유지보수, 개발기간 등 다양한 부분에서 비효율이 발생했다.   
-이런 어려움을 해결하기 위해 "효과적인 개발방식"을 채택하게 되었고, 이는 이전에 사용하던 흐름에 따른 개발 방식에서 벗어나 객체지향의 특성인 추상화, 상속, 은닉, 재사용, 인터페이스 등 여러 곳에서 객체지향으로 개발을 시작했다. 함수의 활용으로도 충분히 좋은 프로그램을 개발할 수 있었으나 새로운 시각으로 바라보기 시작했다.   
-객체지향이란 현실에 존재하는 사물을 있는 그대로 모델링하여, 이들의 "행위와 속성을 정의"하고, 절차적이 아닌 객체가 중심이 되어 "실제 사물이 동작하는 방식으로 설계"하는 것이다. 이는 사물에 대해 "객체(Object)"라고 부르며, 해당 사물이 하는 "행위를 Method"로 정의하고 해당 사물이 가지는 속성을 "변수(Variable)"라고 정의한다. 실제 사물을 중심으로 설계하기 때문에 기존의 절차지향보다는 조금 더 "편리한 설계"가 가능해졌다.   
+이전에는 C언어처럼 실행하고자 하는 순서대로 명령어를 입력해서 실행되는 **절차 지향**이 주를 이뤘으며, 이러한 방법으로 코딩하는 언어를 **절차지향 언어**라고 한다. 이 때에는 프로그램의 단위가 크지 않았으며, 대체적으로 간단한 Logic을 순차적으로 처리하여 결과를 얻는데 그쳤지만, 점점 컴퓨터의 발전과 이로 인하여 프로그램의 복잡도가 증가하면서 이에 들어가는 유지보수, 개발기간 등 다양한 부분에서 비효율이 발생했다.   
+이런 어려움을 해결하기 위해 **효과적인 개발방식**을 채택하게 되었고, 이는 이전에 사용하던 흐름에 따른 개발 방식에서 벗어나 객체지향의 특성인 추상화, 상속, 은닉, 재사용, 인터페이스 등 여러 곳에서 객체지향으로 개발을 시작했다. 함수의 활용으로도 충분히 좋은 프로그램을 개발할 수 있었으나 새로운 시각으로 바라보기 시작했다.   
+객체지향이란 현실에 존재하는 사물을 있는 그대로 모델링하여, 이들의 **행위와 속성을 정의**하고, 절차적이 아닌 객체가 중심이 되어 **실제 사물이 동작하는 방식으로 설계**하는 것이다. 이는 사물에 대해 **객체(Object)**라고 부르며, 해당 사물이 하는 **행위를 Method**로 정의하고 해당 사물이 가지는 속성을 **변수(Variable)**라고 정의한다. 실제 사물을 중심으로 설계하기 때문에 기존의 절차지향보다는 조금 더 **편리한 설계**가 가능해졌다.   
 Java는 1995년 Sun Microsystems에서 작은 언어를 지향하는 객체지향 언어로 소개되었다. 당시 C++과 유사한 언어의 구문을 채택하였으나, C++이 가지고 있는 시스템 레벨 접근, 메모리 직접 할당 및 해제, 포인터 등 복잡한 개발 방식을 사용하지 않았다. 또한 어떠한 운영체제에서도 자바 가상 머신만 있으면 독립적으로 실행될 수 있도록 설계가 되어 있어, 여러 플랫폼에서 호환성을 제공하는 장점을 가진다.   
 </details>
 <br>
 
 ### 객체의 3가지 요소
 <details>
-<summary>상태 유지 (객체의 상태)</summary>
-객체는 상태 정보를 저장하고, 유지되어져야 하며 이러한 속성(Variable)은 변수로 정의되어져야 한다. 이러한 속성값이 바뀜으로 인하여, 객체의 상태가 변경될 수 있어야 한다.
+<summary><b>상태 유지 (객체의 상태)</b></summary>
+
+객체는 상태 정보를 저장하고, 유지되어져야 하며 이러한 속성(Variable)은 변수로 정의되어져야 한다.    
+이러한 속성값이 바뀜으로 인하여, 객체의 상태가 변경될 수 있어야 한다.
 </details>
 <details>
-<summary>기능 제공 (객체의 책임)</summary>
-객체는 기능을 제공해야 한다. 이 부분은 Method의 제공으로 이루어진다. 이 부분은 캡슐화와 연관이 있으며, 외부로부터 직접 속성에 접근하여 변경하는 것이 아닌 객체가 제공하는 Method로 기능이 제공되어져야 한다.
+<summary><b>기능 제공 (객체의 책임)</b></summary>
+
+객체는 기능을 제공해야 한다. 이 부분은 Method의 제공으로 이루어진다.   
+이 부분은 캡슐화와 연관이 있으며, 외부로부터 직접 속성에 접근하여 변경하는 것이 아닌 객체가 제공하는 Method로 기능이 제공되어져야 한다.
 </details>
 <details>
-<summary>고유 식별자 제공 (객체의 유일성)</summary>
-각각의 객체는 고유한 식별자를 가져야 한다. 예를 들면 카드번호, 계좌번호, 자동차번호와 같은 속성을 통해서 각각 고유한 값을 줄 수 있으며, 이는 이후 DB에서 Unique Key, 또는 Primary key로도 작성이 가능하다.
+<summary><b>고유 식별자 제공 (객체의 유일성)</b></summary>
+
+각각의 객체는 고유한 식별자를 가져야 한다.   
+예를 들면 카드번호, 계좌번호, 자동차번호와 같은 속성을 통해서 각각 고유한 값을 줄 수 있으며,   
+이는 이후 DB에서 Unique Key, 또는 Primary key로도 작성이 가능하다.
 </details>
 <br>
 
 ### 물리 객체와 개념 객체
 <details>
-<summary>물리 객체</summary>
+<summary><b>물리 객체</b></summary>
 
 물리적 객체는 실제로 사물이 존재하며, 이를 클래스로 정의한 객체를 의미한다.   
 ex) 자동차 렌탈 시스템: 자동차, 고객, 직원, 사업장, 정비소 등
 </details>
 <details>
-<summary>개념 객체</summary>
+<summary><b>개념 객체</b></summary>
 
-웹 시스템에서 Service에 해당되며, 이는 Busineww logic을 처리하는 부분을 의미한다. Business logic에서는 여러 객체를 서로 상호작용하도록 하며, 객체가 제공하는 오퍼레이션 Method를 통하여 객체의 속성을 변경한다.   
+웹 시스템에서 Service에 해당되며, 이는 Busineww logic을 처리하는 부분을 의미한다.   
+Business logic에서는 여러 객체를 서로 상호작용하도록 하며,   
+객체가 제공하는 오퍼레이션 Method를 통하여 객체의 속성을 변경한다.   
 ex) 사용자 관리 시스템: 사용자 객체의 마지막 접속일자를 이용하여 계정만료, 비밀번호 초기화, 재등록 처리 등
 </details>
 <br>
 
 ### 객체지향의 4대 특성
 <details>
-<summary>캡슐화</summary>
+<summary><b>캡슐화</b></summary>
 객체의 속성(Variable)을 보호하기 위해서 사용한다.
+<br>
 <p>
 Method 설계
 
@@ -83,7 +93,7 @@ Method 설계
 </p>
 </details>
 <details>
-<summary>상속</summary>
+<summary><b>상속</b></summary>
 객체지향에서의 상속은, 속성의 상속이 아닌 하위로 내려갈수록 구체화되는 것이다.
 <p>
 상속의 효과
@@ -95,18 +105,18 @@ Method 설계
 </p>
 </details>
 <details>
-<summary>다형성</summary>
+<summary><b>다형성</b></summary>
 다형성은 하나의 개체가 여러 개의 형태로 변화하는 것을 말하며 이를 객체지향에서도 유사하게 사용한다. 다형성은 오버라이딩을 통해 가능하다.
 </details>
 <details>
-<summary>추상화</summary>
+<summary><b>추상화</b></summary>
 객체지향에서의 추상화는 모델링이다. 구체적으로 공통적인 부분 또는 특정 특성을 분리하여 재조합하는 부분이 추상화이다. 다형성, 상속 모두 추상화에 속한다.
 </details>
 <br>
 
 ### 객체지향 설계 5원칙 SOLID
 <details>
-<summary>결합도와 응집도</summary>
+<summary><b>결합도와 응집도</b></summary>
 
 좋은 소프트웨어 설계를 위해서는 결합도(coupling)는 낮추고 응집도(cohesion)는 높여야 한다.   
 - 결합도: 모듈(클래스) 간의 상호 의존 정도를 나타내는 지표로써 결합도가 낮으면 모듈간의 상호 의존성이 줄어들어서 객체의 재사용 및 유지보수가 유리하다.   
@@ -115,44 +125,44 @@ Method 설계
 
 #### SOLID
 <details>
-<summary>SRP(Single Responsibility Principle): 단일 책임 원칙</summary>
+<summary><b>SRP(Single Responsibility Principle): 단일 책임 원칙</b></summary>
 어떠한 클래스를 변경해야 하는 이유는 한가지 뿐이어야 한다.
 </details>
 <details>
-<summary>OCP(Open Closed Principle): 개방 폐쇄 원칙</summary>
+<summary><b>OCP(Open Closed Principle): 개방 폐쇄 원칙</b></summary>
 자신의 확장에는 열려있고, 주변의 변화에 대해서는 닫혀있어야 한다. 상위 클래스 또는 인터페이스를 중간에 둠으로써 자신은 변화에 대해서 폐쇄적이지만, 인터페이스는 외부의 변화에 대해서 확장을 개방해줄 수 있다. 이러한 부분은 JDBC와 Mybatis, Hibernate 등 Java에서는 Stream(Input/Out)에서 찾아볼 수 있다.
 </details>
 <details>
-<summary>LSP(Liskov Substitution Priciple): 리스코프 치환 원칙</summary>
+<summary><b>LSP(Liskov Substitution Priciple): 리스코프 치환 원칙</b></summary>
 서브 타입은 언제나 자신 기반(상위) 타입으로 교체할 수 있어야 한다.
 </details>
 <details>
-<summary>ISP(Interface Segregation Principle): 인터페이스 분리 원칙</summary>
+<summary><b>ISP(Interface Segregation Principle): 인터페이스 분리 원칙</b></summary>
 클라이언트는 자신이 사용하지 않는 메서드에 의존 관계를 맺으면 안된다. 프로젝트 요구 사항과 설계에 따라서 SRP(단일책임원칙)/ISP(인터페이스분리원칙)를 선택한다.
 </details>
 <details>
-<summary>DIP(Dependency Inversion Principle): 의존 역전 원칙</summary>
+<summary><b>DIP(Dependency Inversion Principle): 의존 역전 원칙</b></summary>
 자신보다 변하기 쉬운 것에 의존하지 말아야 한다.
 </details>
 <br>
 
 ### POJO(Plain Old Java Object) Java
 <details>
-<summary>POJO란?</summary>
+<summary><b>POJO란?</b></summary>
 순수한 자바 오브젝트를 뜻한다.
 </details>
 <details>
-<summary>특정 규약에 종속되지 않는다.</summary>
+<summary><b>특정 규약에 종속되지 않는다.</b></summary>
 특정 Library, Module에서 정의된 클래스를 상속받아서 구현하지 않아도 된다. POJO가 되기 위해서는 외부에 의존성을 두지 않고, 순수한 Java로 구성이 가능해야 한다.
 </details>
 <details>
-<summary>특정 환경에 종속되지 않는다.</summary>
+<summary><b>특정 환경에 종속되지 않는다.</b></summary>
 만일 특정 비즈니스 로직을 처리하는 부분에 외부 종속적인 http request, session 등이 있다면 POJO를 위배한 것으로 간주한다. 또한 많이 사용하고 있는 @Annotation 기반으로 설정하는 부분도 엄연히는 POJO라고 볼 수 없다.
 </details>
 
 #### POJO Framework
 <details>
-<summary>Spring / Hibernate</summary>
+<summary><b>Spring / Hibernate</b></summary>
 하나의 서비스를 개발하기 위해서는 시스템의 복잡함, 비즈니스 로직의 복잡함 등 다양한 어려움을 맞이하게 된다. 두 프레임워크는 객체지향적인 설계를 하고 있으며, 또한 개발자가 서비스 로직에 집중하고 이를 POJO로 쉽게 개발할 수 있도록 지원하고 있다.
 </details>
 <br>
@@ -162,15 +172,15 @@ Method 설계
 
 ### 디자인 패턴
 <details>
-<summary>디자인 패턴이란?</summary>
+<summary><b>디자인 패턴이란?</b></summary>
 자주 사용하는 설계 패턴을 정형화해서 이를 유형별로 가장 최적의 방법으로 개발을 할 수 있도록 정해둔 설계이다. 알고리즘과 유사하지만 명확하게 정답이 있는 형태는 아니며 프로젝트의 상황에 맞추어 적용 가능하다.
 </details>
 <details>
-<summary>GOF 디자인 패턴</summary>
+<summary><b>GOF 디자인 패턴</b></summary>
 소프트웨어를 설계할 때는 기존의 경험이 매우 중요하다. 그러나 모든 사람들이 다양한 경험을 가지고 있을 수는 없다. 이러한 지식을 공유하기 위해서 나온 것이 GOF(Gand of Four)의 디자인 패턴이다. 객체지향 개념에 따른 설계 중 재사용할 경우 유용한 설계를 디자인 패턴으로 정리해둔 것이다. GOF의 디자인 패턴은 총 23개이며, 이를 잘 이해하고 활용한다면 경험이 부족하더라도 좋은 소프트웨어 설계가 가능하다.
 </details>
 <details>
-<summary>장점 및 단점</summary>
+<summary><b>장점 및 단점</b></summary>
 <p>
 장점
 
@@ -190,7 +200,7 @@ Method 설계
 
 ### 디자인 패턴의 종류
 <details>
-<summary>생성 패턴</summary>
+<summary><b>생성 패턴</b></summary>
 
 객체를 생성하는 것과 관련된 패턴으로, 객체의 생성과 변경이 전체 시스템에 미치는 영향을 최소화하고 코드의 유연성을 높여준다.
 - Factory Method
@@ -201,7 +211,7 @@ Method 설계
 - Chaining
 </details>
 <details>
-<summary>구조 패턴</summary>
+<summary><b>구조 패턴</b></summary>
 
 프로그램 내의 자료구조나 인터페이스 구조 등 프로그램 구조를 설계하는 데 활용될 수 있는 패턴이다. 클래스, 객체들의 구성을 통해서 더 큰 구조를 만들 수 있게 해준다. 큰 규모의 시스템에서는 많은 클래스들이 서로 의존성을 가지게 되는데, 이런 복잡한 구조를 개발하고 유지보수하기 쉽게 만들어 준다.
 - Adaper
@@ -213,7 +223,7 @@ Method 설계
 - Proxy
 </details>
 <details>
-<summary>행위 패턴</summary>
+<summary><b>행위 패턴</b></summary>
 
 반복적으로 사용되는 객체들의 상호작용을 패턴화한 것으로, 클래스나 객체들이 상호작용하는 방법과 책임을 분산하는 방법을 제공한다. 행위 패턴은 행위 관련 패턴을 사용하여 독립적으로 일을 처리하고자 할 때 사용한다.
 - Template Method
@@ -232,31 +242,31 @@ Method 설계
 
 ### 주요 디자인 패턴
 <details>
-<summary>Singleton Pattern</summary>
+<summary><b>Singleton Pattern</b></summary>
 싱글톤 패턴은 어떠한 클래스(객체)가 유일하게 1개만 존재할 때 사용한다. 서로 자원을 공유할 때 주고 사용하는데, 실물 세계에서는 프린터가 해당되며 실제 프로그래밍에서는 TCP Socket 통신에서 서버와 연결된 connect 객체에 주로 사용한다.
 </details>
 <details>
-<summary>Adapter Pattern</summary>
+<summary><b>Adapter Pattern</b></summary>
 어댑터는 실생활에서는 110v를 220v로 변경해주거나, 그 반대로 해주는 흔히 돼지코라고 불리는 변환기를 예로 들 수 있다. 호환성이 없는 기존 클래스의 인터페이스를 변환하여 재사용할 수 있도록 한다. SOLID 중에서 OCP(개방폐쇄원칙)를 다른다.
 </details>
 <details>
-<summary>Proxy Pattern</summary>
+<summary><b>Proxy Pattern</b></summary>
 프록시는 대리인이라는 뜻으로, 뭔가를 대신해서 처리하는 것이다. 프록시 클래스를 통해서 대신 전달하는 형태로 설계되며 실제 Client는 프록시로부터 결과를 받는다. Cache의 기능으로도 활용이 가능하다. SOLID 중에서 OCP(개방폐쇄원칙)와 DIP(의존역전원칙)를 따른다.
 </details>
 <details>
-<summary>Decorator Pattern</summary>
+<summary><b>Decorator Pattern</b></summary>
 데코레이터 패턴은 기존 뼈대(클래스)는 유지하되, 이후 필요한 형태로 꾸밀 때 사용한다. 확장이 필요한 경우 상속의 대안으로도 활용한다. SOLID 중에서 OCP(개방폐쇄원칙)와 DIP(의존역전원칙)를 따른다.
 </details>
 <details>
-<summary>Observer Pattern</summary>
+<summary><b>Observer Pattern</b></summary>
 관찰자 패턴은 변화가 일어났을 때, 미리 등록된 다른 클래스에 통보해주는 패턴을 구현한 것이다. Event listener에서 해당 패턴을 많이 사용하고 있다.
 </details>
 <details>
-<summary>Facade Pattern</summary>
+<summary><b>Facade Pattern</b></summary>
 퍼사드는 건물의 앞쪽 정면이라는 뜻을 가진다. 여러 개의 객체와 실제 사용하는 서브 객체 사이에 복잡한 의존관계가 있을 때, 중간에 퍼사드라는 객체를 두고, 여기서 제공하는 인터페이스만을 활용하여 기능을 사용하는 방식이다. 퍼사드는 자신이 가지고 있는 각 클래스의 기능을 명확히 알아야 한다.
 </details>
 <details>
-<summary>Strategy Pattern</summary>
+<summary><b>Strategy Pattern</b></summary>
 전략 패턴으로 불리며 객체지향의 꽃이다. 유사한 행위들을 캡슐화하여 객체의 행위를 바꾸고 싶은 경우, 직접 변경하는 것이 아닌 전략만 변경하여 유연하게 확장하는 SOLID 중에서 OCP(개방폐쇄원칙)와 DIP(의존역전원칙)를 따른다. 전략 메서드를 가진 전략 객체, 전략 객체를 사용하는 컨텍스트, 전략 객체를 생성해 컨텍스트에 주입하는 클라이언트로 구성되어 있다.
 </details>
 <br>
@@ -266,11 +276,11 @@ Method 설계
 
 ### Web
 <details>
-<summary>Web이란?</summary>
+<summary><b>Web이란?</b></summary>
 Web(World Wide Web, WWW, W3)은 인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 공유할 수 있는 전 세계적인 정보 공간을 말한다.
 </details>
 <details>
-<summary>Web의 용도</summary>
+<summary><b>Web의 용도</b></summary>
 
 - Web Site :   
 google, naver, daum, facebook 등 HTML로 구성된 여러 사이트들
@@ -280,7 +290,7 @@ Google Open API, Naver Open API, Kakao Open API 등
 Chrome, Safari, Explorer, Smart Watch, IP TV 등
 </details>
 <details>
-<summary>Web의 기반</summary>
+<summary><b>Web의 기반</b></summary>
 
 - HTTP(Hypertext Transfer Protocol) : 
 어플리케이션 컨트롤
@@ -293,11 +303,11 @@ Chrome, Safari, Explorer, Smart Watch, IP TV 등
 
 ### REST
 <details>
-<summary>REST란?</summary>
+<summary><b>REST란?</b></summary>
 REST(Representational State Trasfer)를 직역하면 자원의 상태 전달이며, 네트워크 아키텍쳐를 의미한다.
 </details>
 <details>
-<summary>REST 특징</summary>
+<summary><b>REST 특징</b></summary>
 
 - Client/Server : 클라이언트와 서버가 서로 독립적으로 분리되어 있어야 한다.
 - Stateless : 요청에 대해서 클라이언트의 상태를 서버에 저장하지 않는다.
@@ -307,7 +317,7 @@ REST(Representational State Trasfer)를 직역하면 자원의 상태 전달이�
 - Code on Demand(Optional) : 자바 애플릿, 자바스크립트, 플래시 등 특정한 기능을 서버로부터 클라이언트가 전달받아 코드를 실행할 수 있어야 한다.
 </details>
 <details>
-<summary>인터페이스 일관성</summary>
+<summary><b>인터페이스 일관성</b></summary>
 
 아래의 조건들을 잘 갖춘 경우 RESTful하다고 표현하고 이를 REST API라고 부른다.
 - 자원의 식별 :   
@@ -323,24 +333,24 @@ REST API를 개발할 때 단순히 Client 요청에 대한 데이터만 응답�
 
 ### URI 설계 패턴
 <details>
-<summary>URI > URL</summary>
+<summary><b>URI > URL</b></summary>
 URL은 URI의 하위 개념이다.
 </details>
 <details>
-<summary>URI(Uniform Resource Identifier)</summary>
+<summary><b>URI(Uniform Resource Identifier)</b></summary>
 
 인터넷에서 특정 자원을 나타내는 주소값으로 해당 값은 유일하다(응답은 달라질 수 있음).
 - 요청: https://www.ex.co.kr/resource/sample/1
 - 응답: example.pdf, example.doc
 </details>
 <details>
-<summary>URL(Uniform Resource Locator)</summary>
+<summary><b>URL(Uniform Resource Locator)</b></summary>
 
 인터넷 상에서의 자원, 특정 파일이 어디에 위치하는지 식별하는 주소이다.
 - 요청: https://www.ex.co.kr/example.pdf
 </details>
 <details>
-<summary>URI 설계 원칙(RFC-3986)</summary>
+<summary><b>URI 설계 원칙(RFC-3986)</b></summary>
 
 - 슬래시 구분자(/)는 계층 관계를 나타내는 데 사용한다.<br>
 https://ex.co.kr/classes/java/curriculums
@@ -388,14 +398,14 @@ https://developer-ex.co.kr
 
 ### HTTP Protocol
 <details>
-<summary>HTTP Protocol이란?</summary>
+<summary><b>HTTP Protocol이란?</b></summary>
 
 HTTP(Hyper Text Trasfer Protocol)로 RFC-2616에서 규정된 Web에서 데이터를 주고받는 프로토콜이다.   
 이름은 하이퍼텍스트 전송용 프로토콜로 정의되어 있지만 실제로는 HTML, XML, JSON, Image, Voice, Video, Javascript, PDF 등 다양한 컴퓨터에서 다룰 수 있는 것은 모두 전송할 수 있다.   
 HTTP는 TCP를 기반으로 한 REST의 특징을 모두 구현하고 있는 Web기반의 프로토콜로 메세지를 주고(Request) 받는(Response) 형태의 통신 방법이다.
 </details>
 <details>
-<summary>HTTP 요청 Method</summary>
+<summary><b>HTTP 요청 Method</b></summary>
 
 REST를 구현하기 위한 인터페이스
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
@@ -410,7 +420,7 @@ REST를 구현하기 위한 인터페이스
 |CONNECT|프록시 동작의 터널 접속으로 변경|-|X|-|-|-|-|
 </details>
 <details>
-<summary>HTTP Status Code</summary>
+<summary><b>HTTP Status Code</b></summary>
 
 응답의 상태를 나타내는 코드
 |코드|의미|내용|
@@ -436,19 +446,19 @@ REST를 구현하기 위한 인터페이스
 ## Spring
 
 <details>
-<summary>Spring이란?</summary>
+<summary><b>Spring이란?</b></summary>
 
 - Spring 1.0 버전은 2004년 3월 출시되었으며, 지난 20년 가까이의 세월 동안 자바 엔터프라이즈 어플리케이션 개발의 최고의 자리를 차지했다.
 - 스프링 프레임워크는 20여 가지의 모듈로로 구성되어 있고, 이러한 모듈들은 스프링의 핵심 기능(DI, AOP 등)을 제공해주며 필요한 모듈만 선택하여 사용 가능하다.
 - 현재 단일 아키텍쳐(모놀리스) 마이크로 서비스 아키텍쳐로 변환 중이며 여기에 맞춰 스프링도 진화하고 있는 상태이다.
 - 여러가지 모듈이 있지만 그 중 스프링부트, 스프링클라우드, 스프링데이터, 스프링배치, 스프링시큐리티에 중점을 둔다.
-- 스프링은 "테스트의 용이성", "느슨한 결합"에 중점을 두고 개발한다.
+- 스프링은 **테스트의 용이성**, **느슨한 결합**에 중점을 두고 개발한다.
 - 2000년대 초의 자바 EE 어플리케이션은 작성, 테스트가 매우 어려웠으며 한 번 테스트 하기가 번거로웠다. 이로 인하여 느슨한 결합이 된 어플리케이션 개발이 힘든 상태였으며, 특히 데이터베이스와 같이 외부에 의존성을 두는 경우 단위테스트가 불가능했다.
 - 스프링과 다른 프레임워크의 가장 큰 차이점은 IoC를 통한 개발의 진행이다.
 - AOP를 사용하여 로깅, 트랜잭션 관리, 시큐리티에서의 적용 등 AspectJ와 같이 완벽하게 구현된 AOP와 통합하여 사용 가능하다.
 </details>
 <details>
-<summary>Spring POJO</summary>
+<summary><b>Spring POJO</b></summary>
 
 - IoC / DI: 의존 관계 주입
 - AOP: 관점 중심 프로그램
@@ -458,13 +468,13 @@ REST를 구현하기 위한 인터페이스
 
 ### IoC와 DI
 <details>
-<summary>IoC(Inversion of Control)</summary>
+<summary><b>IoC(Inversion of Control)</b></summary>
 
 스프링에서는 일반적인 자바 객체를 new로 생성하여 개발자가 관리하는 것이 아닌 Spring Container에게 모두 맡긴다.   
-즉, 개발자에서 프레임워크로 제어의 객체 관리 권한이 넘어가며 이를 "제어의 역전"이라 한다.
+즉, 개발자에서 프레임워크로 제어의 객체 관리 권한이 넘어가며 이를 **제어의 역전**이라 한다.
 </details>
 <details>
-<summary>DI(Dependency Injection)</summary>
+<summary><b>DI(Dependency Injection)</b></summary>
 
 장점
 - 의존성으로부터 격리시켜 코드 테스트에 용이하다.
@@ -476,7 +486,7 @@ REST를 구현하기 위한 인터페이스
 
 ### AOP
 <details>
-<summary>AOP(Aspect Oriented Programming)</summary>
+<summary><b>AOP(Aspect Oriented Programming)</b></summary>
 
 관점지향 프로그램을 의미한다.   
 스프링 어플리케이션은 대부분 특별한 경우를 제외하고는 MVC 웹 어플리케이션에서 Web Layer, Business Layer, Data Layer로 정의한다.
@@ -485,7 +495,7 @@ REST를 구현하기 위한 인터페이스
 - Data Layer: 데이터베이스 및 외부와의 연동 처리
 </details>
 <details>
-<summary>주요 Annotation</summary>
+<summary><b>주요 Annotation</b></summary>
 
 |Annotation|Explanation|
 |:-:|-|
@@ -501,7 +511,7 @@ REST를 구현하기 위한 인터페이스
 
 ### 여러 가지 Annotation
 <details>
-<summary>Click하여 보기</summary>
+<summary><b>Click하여 보기</b></summary>
 
 |Annotation|Explanation|
 |:-:|-|
@@ -534,14 +544,14 @@ REST를 구현하기 위한 인터페이스
 ## Spring Boot
 
 <details>
-<summary>Spring Boot</summary>
+<summary><b>Spring Boot</b></summary>
 
 스프링부트는 단순히 실행되며, 프로덕션 제품 수준의 스프링 기반 어플리케이션을 쉽게 만들 수 있다.   
 스프링부트 어플리케이션에는 스프링 구성이 거의 필요하지 않다.   
 스프링부트 java -jar로 실행하는 자바 어플리케이션을 만들 수 있다.
 </details>
 <details>
-<summary>주요 목표</summary>
+<summary><b>주요 목표</b></summary>
 
 - 스프링 개발에 대해 빠르고 광범위하게 적용할 수 있는 환경
 - 기본값 설정이 있지만 설정을 바꿀 수 있음
@@ -549,7 +559,7 @@ REST를 구현하기 위한 인터페이스
 - XML 구성 요구사항이 전혀 없음
 </details>
 <details>
-<summary>장점</summary>
+<summary><b>장점</b></summary>
 
 - 어플리케이션 개발에 필수 요소들만 모아두었다.
 - 간단한 설정으로 개발 및 커스텀이 가능하다.
@@ -562,7 +572,7 @@ REST를 구현하기 위한 인터페이스
 
 ### REST API 관련 Annotation
 <details>
-<summary>GET API</summary>
+<summary><b>GET API</b></summary>
 
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -578,7 +588,7 @@ REST를 구현하기 위한 인터페이스
 |Object|Query Param Object로 Parsing|
 </details>
 <details>
-<summary>POST API</summary>
+<summary><b>POST API</b></summary>
 
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -595,7 +605,7 @@ REST를 구현하기 위한 인터페이스
 |@JsonNaming|class json naming|
 </details>
 <details>
-<summary>PUT API</summary>
+<summary><b>PUT API</b></summary>
 
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -610,7 +620,7 @@ REST를 구현하기 위한 인터페이스
 |@PathVariable|URL Path Variable Parsing|
 </details>
 <details>
-<summary>DELETE API</summary>
+<summary><b>DELETE API</b></summary>
 
 |   |의미|CRUD|멱등성|안정성|Path Variable|Query Parameter|DataBody|
 |:-:|-|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -629,7 +639,7 @@ REST를 구현하기 위한 인터페이스
 
 ### Response 관련 Class 및 Annotation
 <details>
-<summary>Click하여 보기</summary>
+<summary><b>Click하여 보기</b></summary>
 
 |Class/Annotation|Explanation|
 |:-:|-|
@@ -644,14 +654,14 @@ REST를 구현하기 위한 인터페이스
 
 ### Validation
 <details>
-<summary>Validation이란?</summary>
+<summary><b>Validation이란?</b></summary>
 
 Validation은 프로그래밍에 있어서 가장 필요한 부분이다.   
 특히 자바에서는 null 값에 대해서 접근하려고 할 때 null pointer exception이 발생하므로,   
 이러한 부분을 방지하기 위해서 미리 검증하는 과정을 Validation이라고 한다.
 </details>
 <details>
-<summary>특징</summary>
+<summary><b>특징</b></summary>
 
 - 검증해야할 값이 많은 경우 코드의 길이가 길어진다.
 - Service Logic과의 분리가 필요하다.
@@ -659,7 +669,7 @@ Validation은 프로그래밍에 있어서 가장 필요한 부분이다.
 - 검증 Logic이 변경되는 경우, 테스트 코드 등 참조하는 클래스에서 Logic이 변경되어야 하는 부분이 발생할 수 있다.
 </details>
 <details>
-<summary>관련 Annotation</summary>
+<summary><b>관련 Annotation</b></summary>
 
 |Annotation|Explanation|
 |:-:|-|
@@ -678,13 +688,13 @@ Validation은 프로그래밍에 있어서 가장 필요한 부분이다.
 |@Valid|해당 object validation 실행|
 </details>
 <details>
-<summary>Custom Validation</summary>
+<summary><b>Custom Validation</b></summary>
 
 - AssertTrue / False와 같은 method 지정을 통해서 Custom Logic 적용 가능
 - ConstraintValidator를 적용하여 재사용이 가능한 Custom Logic 적용 가능
 </details>
 <details>
-<summary>etc</summary>
+<summary><b>etc</b></summary>
 
 - gradle dependecies   
 implementation("org.springframework.boot:spring-boot-starter-validation")
@@ -695,14 +705,14 @@ https://beanvalidation.org/2.0-jsr380
 
 ### Exception
 <details>
-<summary>Web이 에러를 표현하는 방법</summary>
+<summary><b>Web이 에러를 표현하는 방법</b></summary>
 
 - 에러 페이지
 - 4XX or 5XX 에러
 - Client가 200 외에 처리를 하지 못할 때는 200을 내려주고 별도의 에러 메세지 전달
 </details>
 <details>
-<summary>관련 Annotation</summary>
+<summary><b>관련 Annotation</b></summary>
 
 |Annotation|Explanation|
 |:-:|-|
@@ -713,7 +723,7 @@ https://beanvalidation.org/2.0-jsr380
 
 ### Filter
 <details>
-<summary>Filter란?</summary>
+<summary><b>Filter란?</b></summary>
 Web Application에서 관리되는 영역으로 스프링부트 프레임워크에서 클라이언트로부터 오는 요청/응답에 대해 최초/최종 단계의 위치에 존재하며, 이를 통해서 요청/응답의 정보를 변경하거나 스프링에 의해서 데이터가 변환되기 전의 순수한 클라이언트의 요청/응답 값을 확인할 수 있다.
 유일하게 ServletRequest, ServletResponse의 객체를 변환할 수 있다. 주로 스프링 프레임워크에서는 요청/응답의 logging 용도로 활용하거나 인증과 관련된 logic 들을 해당 Filter에서 처리한다. 이를 선/후 처리 함으로써 Service Business Logic과 분리한다.
 </details>
@@ -721,39 +731,39 @@ Web Application에서 관리되는 영역으로 스프링부트 프레임워크�
 
 ### Interceptor
 <details>
-<summary>Interceptor란?</summary>
+<summary><b>Interceptor란?</b></summary>
 Filter와 매우 유사한 형태로 존재하지만 Spring Context에 등록된다는 차이점이 있다. AOP와 유사한 기능을 제공할 수 있으며, 주로 인증단계를 처리하거나, logging을 하는 데에 사용한다. 이를 선/후 처리 함으로써 Service Business Logic과 분리한다.
 </details>
 <br>
 
 ### JUnit Test
 <details>
-<summary>TDD(Test-driven Development)</summary>
+<summary><b>TDD(Test-driven Development)</b></summary>
 테스트 주도 개발에서 사용하지만, 코드의 유지 보수 및 운영 환경에서의 에러를 미리 방지하기 위해 단위 별로 검증하는 테스트 프레임워크이다.
 </details>
 <details>
-<summary>단위테스트</summary>
+<summary><b>단위테스트</b></summary>
 작성한 코드가 기대하는 대로 동작을 하는지 검증하는 절차이다.
 </details>
 <details>
-<summary>JUnit</summary>
+<summary><b>JUnit</b></summary>
 자바 기반의 단위 테스트를 위한 프레임워크로, Annotation 기반으로 테스트를 지원하며, Assert로 (예상, 실제)를 통해 검증한다.
 </details>
 <details>
-<summary>Jacoco</summary>
+<summary><b>Jacoco</b></summary>
 자바 코드의 코드 커버리지를 체크하는 라이브러리이며, html, xml, csv로 결과 확인 가능하다.
 </details>
 <br>
 
 ### Swagger
 <details>
-<summary>Swagger란?</summary>
+<summary><b>Swagger란?</b></summary>
 
 개발한 REST API를 편리하게 문서화해주고 이를 통해서 관리 및 제 3의 사용자가 편리하게 API를 호출해보고 테스트할 수 있는 프로젝트이다.   
 Spring Boot에서는 간단하게 springfox-boot-starter를 gradle dependencies에 추가하여 사용할 수 있다. 다만, 운영환경과 같은 외부에 노출되면 안되는 곳에 사용할 때는 주의해야 한다.
 </details>
 <details>
-<summary>관련 Annotation</summary>
+<summary><b>관련 Annotation</b></summary>
 
 |Annotation|Explanation|
 |:-:|-|
